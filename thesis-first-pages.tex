@@ -1,0 +1,77 @@
+% ESTE DOCUMENTO GENERARA LAS PRIMERAS PAGINAS DEL LIBRO
+
+% estas paginas las voy a numerar en romanos
+\pagenumbering{roman}
+
+\newcommand{\vquant}{\vskip 0.05\textheight}
+
+\begin{titlepage}
+
+\begin{flushright}
+\rule{\linewidth}{0.5mm}\\
+{\Large \bf 
+Analysis and Development of Algorithms\\
+for the Characterization of Biopolymers\\ 
+and Application to Protein Sequencing\\
+and Protein Folding.\\}
+\rule{\linewidth}{0.5mm}\\
+\end{flushright}
+
+\begin{minipage}{\textwidth}
+\centering
+
+\vquant
+\vquant
+{\large \bf Mauro Faccin}
+
+\vquant
+\vquant
+Departamento de F\'isica Te\'orica\\
+Instituto de Biocomputac\'on y F\'isica de los Sistemas Complejos\\
+\textsc{Universidad de Zaragoza}
+
+
+\vquant
+Tesis Dirigida por:\\
+{\large \bf Pierpaolo Bruscolini}
+
+\vquant
+\vquant
+Junio, 2011
+\end{minipage}
+
+\vfill
+\begin{center}
+\includegraphics[width=0.5\textwidth]{./img/loghi/logo-nuevo-unizar-bn.eps}
+\end{center}
+\end{titlepage}
+
+\newpage
+\thispagestyle{empty}
+\ \\
+\newpage
+
+\thispagestyle{empty}\
+\mbox{}
+\newpage
+
+
+%% AQUI LE DIGO QUE DEBE PONER EN LA CABECERA DEL INDICE:
+\fancyhf{}
+\fancyhead[LE,RO]{\small \rm \thepage}       % pages and right on odd pages%
+\fancyhead[RE]{\small \sl Contents}   % Chapter in the right on even pages
+\fancyhead[LO]{\small \sl Contents}   % Section in the left on odd pages
+%% HECHO!!
+
+\parskip 0cm
+\tableofcontents 
+\markboth{Contents}{Contents}
+\parskip 0.2cm
+
+%% AHORA LE TENGO QUE DECIR COMO HACER EL RESTO BIEN. EN LA SECCION DE
+%% BILIBOGRAFIA NECESITARE HACER OTRO CAMBIO
+\fancyhf{}
+\fancyhead[LE,RO]{\small \rm \thepage}       % pages and right on odd pages%
+\fancyhead[RE]{\small \sl \leftmark}      % Chapter in the right on even pages
+\fancyhead[LO]{\small \sl \rightmark}     % Section in the left on odd pages
+%

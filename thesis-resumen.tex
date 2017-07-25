@@ -1,0 +1,255 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapternonum{Resumen}
+\nopagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%\paragraph{} %senza questo non funziona il correttore ortografico nel resto
+\lettrine{E}{l} estudio de esta Tesis se centra en de dos problemas
+biológicos distintos aplicando un enfoque estadístico-mecánico común:
+en el primer caso el trabajo se centra en el problema de la secuenciación de los
+péptidos a través de la interpretación \emph{de novo} de espectros de masa
+tándem, mientras que en el segundo se estudia el plegamiento de la Miotrofina,
+una pequeña proteína de tipo modular que ha sido recientemente caracterizada por
+diferentes técnicas experimentales.
+ 
+Ambos problemas, como la mayoría de los problemas de tipo biológico, son
+demasiado complejos como para ser tratados de una manera detallada, \emph{ab
+initio}, basándose en una descripción microscópica de las interacciones y de
+los procesos fundamentales involucrados; generalmente para poderlos tratar, se tiene que introducir
+varias simplificaciones en el modelo del sistema original, a costa de
+incluir, inevitablemente, ciertas aproximaciones.
+El típico enfoque empleado en la descripción de sistemas biológicos desde un
+punto de vista mecánico-estadístico se basa en la traducción efectiva del
+sistema complejo original a un modelo físico tratable, posiblemente involucrando
+el uso de coarse-graining u otros tipos de simplificaciones.
+
+En el caso tratado en esta Tesis hemos reescrito el problema original mencionado antes, en
+términos de un oportuno sistema mecánico estadístico a través de la definición
+de las variables dinámicas interesantes y de una función energía que determina
+su comportamiento.
+Además en ambos problemas hemos forzado una modelización de las interacciones que
+nos permita calcular una solución exacta de la distribución de probabilidad en el
+equilibrio a través del método de la matriz de transferencia.
+
+Ambos problemas están relacionados con proteínas: su identificación con MS/MS y su
+plegamiento. 
+
+
+%esta Tesis tratamos de caracterizar dos aparentemente distintos problemas
+%biol\'ogicos: en el primer caso nos acercamos al problema del secuenciación de
+%p\'eptidos en el campo de la Espectrometr\'ia de Masa, mientras en el segundo hemos
+%analizado el plegamiento del la prote\'ina modular Miotrofina.
+%La transformaci\'on de los problemas biol\'ogicos a un sistema mec\'anico estad\'istico
+%se ha tratado con la definici\'on de las variables din\'amicas interesantes y con la
+%escritura de una funci\'on conste que gobierna sus comportamientos.
+%El sistema, si separable en subsistemas con interacciones solamente a primeros
+%vecinos, ofrece una soluci\'on exacta por la distribuci\'on de probabilidad al
+%equilibrio a trav\'es del mecanismo de la matriz de transferencia.
+%En este estudio nos basamos en esta caracter\'istica para profundizar en la
+%descripci\'on de estos sistemas y su diferentes conformaciones.
+
+%\paragraph{¿Que son las Proteínas?}
+%Las Proteínas son moléculas omnipresentes en las células, ellas son involucradas
+%en la mayoría de los procesos bioquímicos que gobiernan su evolución.
+%Las proteínas son polímeros compuestos por secuencias de aminoácidos, y cuya
+%estructura puede ser descrita por medio de una sucesión de símbolos que componen
+%un alfabeto de aminoácidos, esta sucesión se llama estructura primaria.
+%La cadena de aminoácidos que compone la proteína se pliega generalmente en una
+%dada, usualmente globular, estructura tridimensional, adquiriendo de esta forma
+%la función bioquímica que tendrá que desempeñar.
+%
+%La síntesis de proteínas se lleva a cabo dentro de la célula a través de un
+%mecanismo de traducción del ADN.
+%La información de la composición en aminoácidos es, en efecto, codificada en la
+%doble hélice del ADN. Éste se encuentra empaquetado en el nucleo de la célula
+%donde, si hay demanda, se desempaqueta localmente para transcribir su contenido
+%en un suporte temporal llamado ARN.  
+%El ARN sale del núcleo de la célula y entra en el citoplasma donde se encuentran
+%los Ribosomas, aquí el ARN puede someterse a algunas modificaciones antes de
+%empezar la traducción a una cadena polipeptídica.
+%Los Ribozomas descodifican el ARN mensajero usando unas reglas que asignan a
+%cada tripleta de nucleótides del ARN un residuo especifico, este, entonces,
+%es agregado a la cadena del péptido final.
+%
+%Una vez concluida la construcción de la cadena de aminoácidos, esta entra en el
+%proceso de plegamiento para alcanzar la estructura tridimensional que le
+%confiere su función bioquímica.
+%A menudo a este estadio de la síntesis, la proteína puede subir unas
+%modificaciones, caracterizadas sobre todo por agregación o perdida de grupos
+%funcionales.
+%
+%Las proteínas se pliegan en una estructura estable, donde se encuentran a menudo
+%unos patrones dominantes, sobre todo hélices $\alpha$ y hojas $\beta$, llamadas
+%estructuras secundarias.
+%Estos módulos se ordenan en la estructura terciaria global de la molécula
+%plegada.
+%Una estructura cuaternaria se puede encontrar en los complejos de proteínas
+%ligadas entre si a formare una superestructura funcional.
+%
+%Las proteínas se pliegan de manera natural en las condiciones biológicas a las
+%que son sometidas, experimentando un proceso de plegamiento fuera del
+%equilibrio, desde una configuración priva de estructura, la proteína alcanza el
+%estado nativo.
+%El plegamiento es caracterizado por el camino seguido por el polímero en este
+%proceso que describe la formación, dependiente del tiempo, de los contactos a
+%largo alcance entre residuos no vecinos.
+%El principal mecanismo de este proceso puede ser resumido en cuatro
+%comportamientos principales\cite{Nickson2010}: 
+%los módulos de estructura secundaria se forman primero, luego estos difunden y
+%chocan hasta formar la estructura correcta; los residuos hidrófobos colapsa en
+%centro como consecuencia del ambiente acuoso, provocando el plegamiento; un
+%núcleo central empieza el proceso, propagándose luego a resto de la cadena; el
+%núcleo de agregación no basta a provocar el plegamiento, este adviene cuando un
+%numero critico de enlaces a largo alcance se hayan formado.
+%
+%La caracterización del camino de plegamiento se basa en la definición de los rasgos de
+%cada conformación molecular antes de alcanzar el estado nativo\cite{Daggett2002}
+%que refleja las características del paisaje energético.
+%Esto ha sido alcanzado de manera satisfactoria solamente en proteínas pequeñas,
+%combinando resultados experimentales con simulaciones de dinámica molecular.
+%De otra parte, estudios experimentales de plegamiento de proteínas proporciona
+%una instantánea de la estructura a lo largo del camino que, aunque no
+%proporciona una información temporal de la formación de contactos, puede sugerir
+%los atributos de los estados intermedios y del mecanismo general del proceso.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Secuenciamiento de Prote\'inas}
+
+En la primera parte de la Tesis afrontamos el problema de la secuenciación de
+p\'eptidos en el marco de la Espectrometr\'ia de Masa, que consiste en la
+interpretación de un espectro de masa para encontrar la secuencia de amino
+ácidos del péptido estudiado.
+Gracias a su simplicidad y bajo coste, el uso de esta herramienta se
+utiliza ampliamente en el campo del análisis bioquímica de muestras
+desconocidas de proteínas, y, generalmente, está incrustada en una
+instrumentación de tipo high-throughput automatizada, que produce una gran
+cantidad de datos, necesitando entonces una herramienta automatizada para
+interpretarlos. 
+
+En principio, un espectro de masa tándem contiene toda la información necesaria
+para encontrar la secuencia de amino ácidos del péptido que generó el espectro mismo.
+En la práctica, encontrar dicha secuencia desde un espectro es una tarea muy
+difícil por la presencia de ruido, picos debidos a iones
+contaminantes, o falta de fragmentaciones, entre otras cosas.
+De echo, cada espectro es el resultado de las reglas microscópicas que gobiernan
+la transferencia de energía y la fragmentación estocástica del péptido precursor
+en las colisiones, en presencia de ruido y contaminantes de diferentes tipos.
+Desafortunadamente, la predicción \emph{ab initio} del espectro resultante a
+partir de la secuencia del péptido precursor es impracticable, si no imposible,
+y la interpretación de la secuencia del péptido involucra el uso de funciones
+coste \emph{ad hoc} para medir el acuerdo entre el espectro teórico de un
+péptido precursor y el espectro experimental.
+Además, el espacio de búsqueda de las secuencias es generalmente limitada a las
+secuencias de proteínas ya conocidas (``búsqueda sobre bases de datos''). 
+Gracias a esta restricción la búsqueda de la secuencia resulta
+más practica y eficiente de los métodos \emph{de novo}
+que infieren la secuencia del péptido a partir solo de la información contenida
+en el espectro, pero está afectada por sus limitaciones.
+Finalmente en ambos métodos es importante subrayar que un problema central es la
+asignación de un ``grado de confianza'' a las predicciones, entre las cuales
+se pueden encontrar falsos positivos, o sea secuencias equivocadas con alta
+puntuación.
+
+
+A continuación describimos un nuevo algoritmo basado en la traducción del problema de la
+interpretación, al análisis de la distribución al equilibrio de un sistema
+físico discreto adecuadamente definido, cuyas variables dinámicas describen la
+presencia de un enlace peptídico (un sitio de fragmentación) en los nodos de un
+retículo unidimensional, etiquetado por un índice de masa.
+La función energía \emph{ad hoc} que gobierna el modelo, se deduce de la
+distribución fenomenológica de los iones y de los picos de ruido en un conjunto de espectros
+experimentales.
+Las interacciones que caracterizan esta Hamiltoniana son interacciones locales o
+a primeros vecinos de manera que la función de partición del modelo puede ser
+calculada exactamente con el método de la matriz de transferencia.
+Mientras que la identificación de la secuencia del péptido está asociada a la
+caracterización del estado fundamental a temperatura cero, la introducción de
+una temperatura paramétrica y el estudio de las variables termodinámicas como
+función de la temperatura pueden dar una idea de la calidad de la
+interpretación, sin apoyarse a bases de datos decoy (bases de datos compuestas por
+secuencias equivocadas pero con alta puntuación) o en la distribución
+fenomenológicas de las puntuaciones de los falsos positivos.
+
+Aumentando la temperatura, el equilibrio del sistema se aleja
+de un régimen dominado por la energía y polarizado hacía la secuencia mejor
+puntuada, para alcanzar un régimen dominado por la entropía debida a otras
+secuencias con una menor puntuación, lo cual puede ser útil para evaluar la bondad de la predicción.
+
+El algoritmo ha sido testado sobre un conjunto de espectros experimentales 
+acoplados con la secuencia teórica del péptido precursor y sobre el mismo
+conjunto han sido testados algunos de los algoritmos \emph{de novo} disponibles
+(NovoHMM, PepNovo, Lutefisk).
+Nuestro algoritmo produce resultados comparables con los programas existentes
+y además exhibe algunas características útiles relacionadas con el sistema 
+termodinámico asociado que no se encuentran en los demás.
+Sobresale como característica del algoritmo
+la posibilidad de controlar la temperatura de trabajo que,
+junto con la posibilidad de calcular exactamente la distribución de
+probabilidad al equilibrio, proporciona la oportunidad de considerar al
+mismo tiempo el entero espacio de las secuencias cada una con su ``peso''
+termodinámico.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Plegamiento de la Prote\'ina Miotrofina}
+En la segunda parte de la Tesis nos hemos centrado en el problema del
+plegamiento del las proteínas, tratando de caracterizar en particular el
+equilibrio y la cinética de la Miotrofina, una proteína de tipo modular.
+El plegamiento de proteínas es un problema que ha sido enormemente estudiado y
+analizado por parte de los teóricos a partir de muchos niveles de
+coarse-graining, empezando por
+las simulaciones a todos los átomos con interacciones realistas, a una variedad
+de modelos de coarse-graining.
+
+La proteína estudiada en este trabajo, la Miotrofina, es una proteína modular
+compuesta por cuatro módulos con la misma estructura secundaria aunque
+diferentes secuencias, dispuestos en una conformación lineal.
+Esta conformación, común a las proteínas modulares, las diferencia de las ampliamente estudiadas
+proteínas globulares. 
+En las proteínas globulares las
+regiones alejadas en la secuencia se acercan y entran en ``contacto'' cuando la
+proteína se encuentra en el estado nativo, y el alcance de los contactos puede
+abarcar la entera molécula.
+En las proteínas modulares solo hay contactos dentro de cada
+módulo y entre amino ácidos pertenecientes a módulos contiguos.
+La Miotrofina muestra un comportamiento interesante que ha atraído la atención
+de los investigadores: la molécula parece plegarse de manera cooperativa,
+característica típica de las proteínas globulares, mientras su estructura
+modular sugiere una independencia intrínseca de cada módulo, naturalmente
+asociado a un plegamiento con varios estados
+intermedios que corresponden al plegamiento independiente de los módulos.
+
+
+En este trabajo nos basamos en el modelo propuesto por Wako- Saito-Mu\~noz-Eaton
+(WSME) 
+para caracterizar el plegamiento de la Miotrofina.
+Este simple modelo se basa en el uso de una variable binaria para describir el estado
+(``plegado'' o ``desnaturalizado'') de cada residuo usando la información
+contenida en la estructura nativa de la molécula, la cual está almacenada en un mapa de
+contactos que describe la proximidad euclídea de dos residuos y de esta forma predecir el
+comportamiento en el proceso de plegamiento.
+A pesar de la presencia de interacciones a largo alcance, la forma especial de la función energía
+del modelo, le otorga la posibilidad de evaluar exactamente la
+función de partición, así como las cantidades termodinámicas en el equilibrio, como
+la energía libre y la capacidad calorífica, mientras que para describir la dinámica
+del sistema hay que usar unas simulaciones de tipo Monte Carlo.
+
+Usamos el modelo WSME para estudiar la molécula wild-type como algunas
+mutaciones y por esto tratamos las mutaciones puntuales como variaciones del potencial
+de interacción del residuo interesado.
+
+En ambos casos, los resultados muestran un buen acuerdo con los datos
+experimentales, haciendo particular hincapié en la heterogeneidad de los caminos de
+plegamiento.
+El minucioso control sobre las simulaciones, que sobrepasa las posibilidades
+experimentales, nos otorga la posibilidad de sugerir las caracter\'isticas de los
+procesos subyacentes, entre ellos sobresale el acuerdo entre la estructura modular, 
+que produce un
+perfil de la energía libre con múltiple mínimos, y la cooperaci\'on en el proceso
+de plegamiento, y además sobresale que la simetr\'ia entre los caminos de
+plegamiento y de desnaturalizaci\'on de la mol\'ecula no es una condición necesaria.
+
+
+

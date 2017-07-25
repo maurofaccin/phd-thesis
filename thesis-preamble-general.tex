@@ -1,0 +1,78 @@
+% Fichero basico de estilo, tesis del Dpto. de Fisica 
+% de la Materia Condensada
+%
+%
+%\documentclass[11pt,twoside,openright]{book}
+\documentclass[b5paper,11pt,twoside,openright]{book}
+
+% uncomment the following to send to printing
+%\usepackage[a4,center,cam,dvips]{crop}
+
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage[latin1,utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,english]{babel}
+
+% for the first letter of the chapters
+\usepackage{lettrine}
+
+% Figuras, entorno matematico...
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{latexsym} % per le freccine tipo "implica"
+\usepackage{array}    % to use >{$}  <{$} in tabular
+\usepackage{multirow} % to use multirow in tabular
+\usepackage{amstext,amsmath,amssymb,amsfonts,bm}
+\usepackage[small,bf]{caption}
+\setlength{\captionmargin}{20pt}
+\usepackage[usenames,dvipsnames]{color}
+
+\usepackage{verbatim} % multiline comment
+\usepackage{psfrag} % for text substitution in postscripts
+
+%%% Fancy Header %%%
+% Fancy Header Style Options
+\usepackage{fancyhdr}
+\pagestyle{fancy}                       % Sets fancy header and footer
+
+\usepackage{appendix}
+
+\setlength{\headheight}{21pt}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername \ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
+
+\fancyhf{}
+\fancyhead[LE,RO]{\small \rm \thepage}       % pages and right on odd pages%
+\fancyhead[RE]{\small \sl \leftmark}      % Chapter in the right on even pages
+\fancyhead[LO]{\small \sl \rightmark}     % Section in the left on odd pages
+
+\renewcommand{\headrulewidth}{0.3pt}    % Width of head rule
+
+\fancypagestyle{plain}{
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+}
+
+%%% Clear Header %%%
+
+% Clear Header Style on the Last Empty Odd pages
+ \makeatletter
+  \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else%
+    \hbox{}
+    \thispagestyle{empty}               % Empty header styles
+       \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+
+% Una definición necesaria sólo si trabajas en español (comentar si no)
+%\addto\captionsspanish{\def\contentsname{\'Indice}}
+
+% Esto hace que al finalizar un parrafo el salto sea un poco mayor que
+% el interlineado normal
+\parskip 0.2cm
+
+% Ahora viene los comandos propios de cada uno: nuevos comandos.., pero esto
+% quizas mejor ponerlo en otro fichero.

@@ -1,0 +1,61 @@
+% Aqui pondremos los diferentes ficheros que conforman el libro
+%
+% En este caso empezamos leyendo las 'cabeceras' que es como 
+% hemos llamado a los ficheros que definen las cosas basicas de
+% estilo que hay que respetar.
+%   * El fichero 'cabecera.tex' es de caracter general y obligatorio
+%   * El fichero 'cabecera_2.tex' es optativo y contiene definiciones
+%     de instrucciones que quieras hacer o paquetes que quieras
+%     utilizar y no han sido incluidos en el formato general.
+%
+% Despues empieza el documento en si que consta de:
+%   * Fichero 'primeras_paginas.tex' contiene la informacion de las
+%     primeras paginas del libro. Esta paginas estan numeradas en
+%     romanos. Ver fichero para explicacion.
+%
+%   * A continuacion introducimos los distintos ficheros que van a
+%     formar el libro. Puede trocearse como queramos (un fichero para
+%     todo, uno por capitulo,...)
+
+\include{thesis-preamble-general}
+\include{thesis-preamble-personal}
+
+\begin{document}
+
+\include{thesis-front-page}
+\cleardoublepage%
+
+\include{thesis-first-pages}
+\cleardoublepage%
+
+\pagenumbering{arabic}
+
+\include{thesis-resumen}
+\include{thesis-intro}
+
+%%%%%%% FIRST PART - MSMS
+\include{thesis-msms-intro}
+\include{thesis-msms-spectrometry}
+\include{thesis-msms-algorithm}
+\include{thesis-msms-db_learn}
+\include{thesis-msms-potential}
+\include{thesis-msms-conclusions}
+\cleardoublepage%
+%
+%%%%% SECOND PART - WSME
+\include{thesis-wsme-intro}
+\include{thesis-wsme-chap1}
+\include{thesis-wsme-chap2}
+\cleardoublepage%
+
+%%%%% FINAL PART - CONCLUSIONS AND APPENDICES
+\include{thesis-conclusions}
+\include{thesis-conclusiones}
+\include{thesis-appendix}
+\include{thesis-msms-appendix}
+\include{thesis-appendix-papers}
+
+%%%%% BIBLIOGRAPHY
+\include{thesis-biblio}
+
+\end{document} 

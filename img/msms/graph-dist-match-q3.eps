@@ -1,0 +1,1900 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: graph-dist-match-q3.tex
+%%Creator: gnuplot 4.4 patchlevel 2
+%%CreationDate: Mon Sep 26 13:08:41 2011
+%%DocumentFonts: 
+%%BoundingBox: 50 50 410 302
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext true def
+/Solid false def
+/Dashlength 1 def
+/Landscape false def
+/Level1 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+%
+/vshift -80 def
+/dl1 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+Level1 {} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (graph-dist-match-q3.tex)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.4 patchlevel 2)
+  /Author (mauro)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Mon Sep 26 13:08:41 2011)
+  /DOCINFO pdfmark
+end
+} ifelse
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 4.4 (August 2010)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Default Line colors
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default Line Types
+/LTw {PL [] 1 setgray} def
+/LTb {BL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
+/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
+/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
+/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
+/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  gsave 1 setgray fill grestore clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+ 2 lt
+	{/InterpretLevel1 true def}
+	{/InterpretLevel1 Level1 def}
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+end
+%%EndProlog
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.050 0.050 scale
+0 setgray
+newpath
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 Gamma mul div def
+/ColorSpace (RGB) def
+Color InterpolatedColor or { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1186 4154 M
+0 -3029 V
+4827 0 R
+0 3029 R
+-4827 0 V
+stroke
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 1187 1126 M
+0 3028 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1187 1126 M
+0 82 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 2152 1126 M
+0 3028 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 2152 1126 M
+0 82 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 3118 1126 M
+0 3028 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 3118 1126 M
+0 82 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 4082 1126 M
+0 3028 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 4082 1126 M
+0 82 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 5048 1126 M
+0 3028 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 5048 1126 M
+0 82 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 6013 1126 M
+0 3028 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6013 1126 M
+0 82 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 1187 1126 M
+4826 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1187 1126 M
+82 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 1187 1732 M
+4826 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1187 1732 M
+82 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 1187 2338 M
+4826 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1187 2338 M
+82 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 1187 2942 M
+4826 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1187 2942 M
+82 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 1187 3548 M
+4826 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1187 3548 M
+82 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LTa
+LCa setrgbcolor
+0.50 0.50 0.50 C 1187 4154 M
+4826 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1187 4154 M
+82 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UP
+1.000 UL
+LT0
+LC0 setrgbcolor
+%pm3d_map_begin
+0 g 1186 1125 N -121 0 0 3029 121 0 h
+1307 1125 N 0 0 0 3029 0 0 h
+1307 1125 N -120 0 0 3029 120 0 h
+1427 1125 N 0 0 0 3029 0 0 h
+1427 1125 N -121 0 0 3029 121 0 h
+.0046 g 1548 1125 N 0 2965 0 64 0 0 h
+.0092 g 1548 1125 N -121 0 0 64 121 0 h
+.0046 g 1548 1189 N -121 0 0 0 121 0 h
+0 g 1548 1189 N -121 0 0 157 121 0 h
+1548 1346 N -121 0 0 0 121 0 h
+1548 1346 N -121 0 0 302 121 0 h
+1548 1648 N -121 0 0 0 121 0 h
+1548 1648 N -121 0 0 2506 121 0 h
+.0505 g 1669 1125 N 0 24 0 40 0 0 h
+.0367 g 1669 1189 N 0 24 0 0 0 -24 h
+.0229 g 1669 1189 N 0 99 0 82 0 -24 h
+.0138 g 1669 1346 N 0 99 0 0 0 -99 h
+.0046 g 1669 1346 N 0 305 0 96 0 -99 h
+.0161 g 1669 1648 N 0 305 0 0 0 -305 h
+.0275 g 1669 1648 N 0 2583 0 228 0 -305 h
+.0917 g 1669 1125 N -120 0 0 40 120 0 h
+.0688 g 1669 1165 N -120 0 0 0 120 0 h
+.0459 g 1669 1165 N -120 0 0 82 120 0 h
+.0275 g 1669 1247 N -120 0 0 0 120 0 h
+.0092 g 1669 1247 N -120 0 0 96 120 0 h
+.0321 g 1669 1343 N -120 0 0 0 120 0 h
+.055 g 1669 1343 N -120 0 0 228 120 0 h
+.0367 g 1669 1571 N -120 0 0 0 120 0 h
+.0183 g 1669 1571 N -120 0 0 182 120 0 h
+.0092 g 1669 1753 N -120 0 0 0 120 0 h
+0 g 1669 1753 N -120 0 0 425 120 0 h
+1669 2178 N -120 0 0 0 120 0 h
+1669 2178 N -120 0 0 1976 120 0 h
+.0459 g 1789 1125 N 0 40 0 0 0 0 h
+.0344 g 1789 1165 N 0 40 0 0 0 -40 h
+.0229 g 1789 1165 N 0 119 0 3 0 -40 h
+.0642 g 1789 1247 N 0 119 0 0 0 -119 h
+.1055 g 1789 1247 N 0 154 0 61 0 -119 h
+.1055 g 1789 1343 N 0 154 0 0 0 -154 h
+.1055 g 1789 1343 N 0 299 0 83 0 -154 h
+.0711 g 1789 1571 N 0 299 0 0 0 -299 h
+.0367 g 1789 1571 N 0 439 0 42 0 -299 h
+.0321 g 1789 1753 N 0 439 0 0 0 -439 h
+.0275 g 1789 1753 N 0 737 0 127 0 -439 h
+.0321 g 1789 2178 N 0 737 0 0 0 -737 h
+.0367 g 1789 2178 N 0 2536 0 177 0 -737 h
+0 g 1789 1125 N -121 0 0 0 121 0 h
+1789 1125 N -121 0 0 0 121 0 h
+1789 1125 N -121 0 0 3 121 0 h
+.1009 g 1789 1128 N -121 0 0 0 121 0 h
+.2018 g 1789 1128 N -121 0 0 61 121 0 h
+.1789 g 1789 1189 N -121 0 0 0 121 0 h
+.156 g 1789 1189 N -121 0 0 83 121 0 h
+.1055 g 1789 1272 N -121 0 0 0 121 0 h
+.055 g 1789 1272 N -121 0 0 42 121 0 h
+1789 1314 N -121 0 0 0 121 0 h
+1789 1314 N -121 0 0 127 121 0 h
+.0642 g 1789 1441 N -121 0 0 0 121 0 h
+.0734 g 1789 1441 N -121 0 0 177 121 0 h
+.0413 g 1789 1618 N -121 0 0 0 121 0 h
+.0092 g 1789 1618 N -121 0 0 307 121 0 h
+.0046 g 1789 1925 N -121 0 0 0 121 0 h
+0 g 1789 1925 N -121 0 0 624 121 0 h
+1789 2549 N -121 0 0 0 121 0 h
+1789 2549 N -121 0 0 1605 121 0 h
+.0092 g 1910 1125 N 0 0 0 0 0 0 h
+.0046 g 1910 1125 N 0 0 0 0 0 0 h
+0 g 1910 1125 N 0 -1 0 4 0 0 h
+.1101 g 1910 1128 N 0 -1 0 0 0 1 h
+.2202 g 1910 1128 N 0 19 0 41 0 1 h
+.2363 g 1910 1189 N 0 19 0 0 0 -19 h
+.2523 g 1910 1189 N 0 22 0 80 0 -19 h
+.1904 g 1910 1272 N 0 22 0 0 0 -22 h
+.1284 g 1910 1272 N 0 -37 0 101 0 -22 h
+.1101 g 1910 1314 N 0 -37 0 0 0 37 h
+.0917 g 1910 1314 N 0 -2 0 92 0 37 h
+.0872 g 1910 1441 N 0 -2 0 0 0 2 h
+.0826 g 1910 1441 N 0 -108 0 283 0 2 h
+.055 g 1910 1618 N 0 -108 0 0 0 108 h
+.0275 g 1910 1618 N 0 -274 0 473 0 108 h
+.0206 g 1910 1925 N 0 -274 0 0 0 274 h
+.0138 g 1910 1925 N 0 -1605 0 1955 0 274 h
+.0183 g 1910 1125 N -121 0 0 0 121 0 h
+.0092 g 1910 1125 N -121 0 0 0 121 0 h
+0 g 1910 1125 N -121 0 0 4 121 0 h
+.1193 g 1910 1129 N -121 0 0 0 121 0 h
+.2385 g 1910 1129 N -121 0 0 41 121 0 h
+.2936 g 1910 1170 N -121 0 0 0 121 0 h
+.3486 g 1910 1170 N -121 0 0 80 121 0 h
+.2752 g 1910 1250 N -121 0 0 0 121 0 h
+.2018 g 1910 1250 N -121 0 0 101 121 0 h
+.1651 g 1910 1351 N -121 0 0 0 121 0 h
+.1284 g 1910 1351 N -121 0 0 92 121 0 h
+.1101 g 1910 1443 N -121 0 0 0 121 0 h
+.0917 g 1910 1443 N -121 0 0 283 121 0 h
+.0688 g 1910 1726 N -121 0 0 0 121 0 h
+.0459 g 1910 1726 N -121 0 0 473 121 0 h
+.0367 g 1910 2199 N -121 0 0 0 121 0 h
+.0275 g 1910 2199 N -121 0 0 1955 121 0 h
+.0138 g 2031 1125 N 0 0 0 0 0 0 h
+.0069 g 2031 1125 N 0 0 0 0 0 0 h
+0 g 2031 1125 N 0 0 0 4 0 0 h
+.2546 g 2031 1129 N 0 0 0 0 0 0 h
+.5092 g 2031 1129 N 0 -44 0 85 0 0 h
+.4106 g 2031 1170 N 0 -44 0 0 0 44 h
+.3119 g 2031 1170 N 0 -34 0 70 0 44 h
+.2385 g 2031 1250 N 0 -34 0 0 0 34 h
+.1651 g 2031 1250 N 0 18 0 49 0 34 h
+.1606 g 2031 1351 N 0 18 0 0 0 -18 h
+.156 g 2031 1351 N 0 20 0 90 0 -18 h
+.1583 g 2031 1443 N 0 20 0 0 0 -20 h
+.1606 g 2031 1443 N 0 137 0 166 0 -20 h
+.1078 g 2031 1726 N 0 137 0 0 0 -137 h
+.055 g 2031 1726 N 0 347 0 263 0 -137 h
+.0436 g 2031 2199 N 0 347 0 0 0 -347 h
+.0321 g 2031 2199 N 0 1901 0 401 0 -347 h
+.0092 g 2031 1125 N -120 0 0 0 120 0 h
+.0046 g 2031 1125 N -120 0 0 0 120 0 h
+0 g 2031 1125 N -120 0 0 4 120 0 h
+.3899 g 2031 1129 N -120 0 0 0 120 0 h
+.7799 g 2031 1129 N -120 0 0 85 120 0 h
+.5276 g 2031 1214 N -120 0 0 0 120 0 h
+.2752 g 2031 1214 N -120 0 0 70 120 0 h
+.2018 g 2031 1284 N -120 0 0 0 120 0 h
+.1284 g 2031 1284 N -120 0 0 49 120 0 h
+.156 g 2031 1333 N -120 0 0 0 120 0 h
+.1835 g 2031 1333 N -120 0 0 90 120 0 h
+.2064 g 2031 1423 N -120 0 0 0 120 0 h
+.2294 g 2031 1423 N -120 0 0 166 120 0 h
+.1468 g 2031 1589 N -120 0 0 0 120 0 h
+.0642 g 2031 1589 N -120 0 0 263 120 0 h
+.0505 g 2031 1852 N -120 0 0 0 120 0 h
+.0367 g 2031 1852 N -120 0 0 401 120 0 h
+.0321 g 2031 2253 N -120 0 0 0 120 0 h
+.0275 g 2031 2253 N -120 0 0 758 120 0 h
+.0138 g 2031 3011 N -120 0 0 0 120 0 h
+0 g 2031 3011 N -120 0 0 1143 120 0 h
+.0229 g 2151 1125 N 0 0 0 0 0 0 h
+.0115 g 2151 1125 N 0 0 0 0 0 0 h
+0 g 2151 1125 N 0 2 0 2 0 0 h
+.3762 g 2151 1129 N 0 2 0 0 0 -2 h
+.7523 g 2151 1129 N 0 17 0 70 0 -2 h
+.5482 g 2151 1214 N 0 17 0 0 0 -17 h
+.3441 g 2151 1214 N 0 16 0 71 0 -17 h
+.2752 g 2151 1284 N 0 16 0 0 0 -16 h
+.2064 g 2151 1284 N 0 15 0 50 0 -16 h
+.2156 g 2151 1333 N 0 15 0 0 0 -15 h
+.2248 g 2151 1333 N 0 29 0 76 0 -15 h
+.2156 g 2151 1423 N 0 29 0 0 0 -29 h
+.2064 g 2151 1423 N 0 112 0 83 0 -29 h
+.1743 g 2151 1589 N 0 112 0 0 0 -112 h
+.1422 g 2151 1589 N 0 239 0 136 0 -112 h
+.1514 g 2151 1852 N 0 239 0 0 0 -239 h
+.1606 g 2151 1852 N 0 376 0 264 0 -239 h
+.1101 g 2151 2253 N 0 376 0 0 0 -376 h
+.0596 g 2151 2253 N 0 852 0 282 0 -376 h
+.0505 g 2151 3011 N 0 852 0 0 0 -852 h
+.0413 g 2151 3011 N 0 1644 0 351 0 -852 h
+.0367 g 2151 1125 N -121 0 0 0 121 0 h
+.0183 g 2151 1125 N -121 0 0 0 121 0 h
+0 g 2151 1125 N -121 0 0 2 121 0 h
+.3624 g 2151 1127 N -121 0 0 0 121 0 h
+.7248 g 2151 1127 N -121 0 0 70 121 0 h
+.5688 g 2151 1197 N -121 0 0 0 121 0 h
+.4129 g 2151 1197 N -121 0 0 71 121 0 h
+.3486 g 2151 1268 N -121 0 0 0 121 0 h
+.2844 g 2151 1268 N -121 0 0 50 121 0 h
+.2752 g 2151 1318 N -121 0 0 0 121 0 h
+.2661 g 2151 1318 N -121 0 0 76 121 0 h
+.2248 g 2151 1394 N -121 0 0 0 121 0 h
+.1835 g 2151 1394 N -121 0 0 83 121 0 h
+.2018 g 2151 1477 N -121 0 0 0 121 0 h
+.2202 g 2151 1477 N -121 0 0 136 121 0 h
+.2523 g 2151 1613 N -121 0 0 0 121 0 h
+.2844 g 2151 1613 N -121 0 0 264 121 0 h
+.1881 g 2151 1877 N -121 0 0 0 121 0 h
+.0917 g 2151 1877 N -121 0 0 282 121 0 h
+.0872 g 2151 2159 N -121 0 0 0 121 0 h
+.0826 g 2151 2159 N -121 0 0 351 121 0 h
+.0734 g 2151 2510 N -121 0 0 0 121 0 h
+.0642 g 2151 2510 N -121 0 0 475 121 0 h
+.0413 g 2151 2985 N -121 0 0 0 121 0 h
+.0183 g 2151 2985 N -121 0 0 1169 121 0 h
+.0092 g 2151 4154 N -121 0 0 0 121 0 h
+0 g 2151 4154 N -121 0 0 0 121 0 h
+.0275 g 2272 1125 N 0 0 0 0 0 0 h
+.0138 g 2272 1125 N 0 0 0 0 0 0 h
+0 g 2272 1125 N 0 -2 0 4 0 0 h
+.3991 g 2272 1127 N 0 -2 0 0 0 2 h
+.7982 g 2272 1127 N 0 -20 0 88 0 2 h
+.6101 g 2272 1197 N 0 -20 0 0 0 20 h
+.422 g 2272 1197 N 0 8 0 43 0 20 h
+.3578 g 2272 1268 N 0 8 0 0 0 -8 h
+.2936 g 2272 1268 N 0 18 0 40 0 -8 h
+.3326 g 2272 1318 N 0 18 0 0 0 -18 h
+.3716 g 2272 1318 N 0 15 0 79 0 -18 h
+.3051 g 2272 1394 N 0 15 0 0 0 -15 h
+.2385 g 2272 1394 N 0 0 0 98 0 -15 h
+.2569 g 2272 1477 N 0 0 0 0 0 0 h
+.2752 g 2272 1477 N 0 19 0 117 0 0 h
+.2684 g 2272 1613 N 0 19 0 0 0 -19 h
+.2615 g 2272 1613 N 0 157 0 126 0 -19 h
+.2133 g 2272 1877 N 0 157 0 0 0 -157 h
+.1651 g 2272 1877 N 0 283 0 156 0 -157 h
+.1629 g 2272 2159 N 0 283 0 0 0 -283 h
+.1606 g 2272 2159 N 0 254 0 380 0 -283 h
+.1651 g 2272 2510 N 0 254 0 0 0 -254 h
+.1697 g 2272 2510 N 0 20 0 709 0 -254 h
+.1147 g 2272 2985 N 0 20 0 0 0 -20 h
+.0596 g 2272 2985 N 0 689 0 500 0 -20 h
+.0413 g 2272 4154 N 0 689 0 0 0 -689 h
+.0229 g 2272 4154 N 0 0 0 689 0 -689 h
+.0183 g 2272 1125 N -121 0 0 0 121 0 h
+.0092 g 2272 1125 N -121 0 0 0 121 0 h
+0 g 2272 1125 N -121 0 0 4 121 0 h
+.4358 g 2272 1129 N -121 0 0 0 121 0 h
+.8716 g 2272 1129 N -121 0 0 88 121 0 h
+.6514 g 2272 1217 N -121 0 0 0 121 0 h
+.4312 g 2272 1217 N -121 0 0 43 121 0 h
+.367 g 2272 1260 N -121 0 0 0 121 0 h
+.3028 g 2272 1260 N -121 0 0 40 121 0 h
+.3899 g 2272 1300 N -121 0 0 0 121 0 h
+.4771 g 2272 1300 N -121 0 0 79 121 0 h
+.3853 g 2272 1379 N -121 0 0 0 121 0 h
+.2936 g 2272 1379 N -121 0 0 98 121 0 h
+.3119 g 2272 1477 N -121 0 0 0 121 0 h
+.3303 g 2272 1477 N -121 0 0 117 121 0 h
+.2844 g 2272 1594 N -121 0 0 0 121 0 h
+.2385 g 2272 1594 N -121 0 0 126 121 0 h
+2272 1720 N -121 0 0 0 121 0 h
+2272 1720 N -121 0 0 156 121 0 h
+2272 1876 N -121 0 0 0 121 0 h
+2272 1876 N -121 0 0 380 121 0 h
+.2569 g 2272 2256 N -121 0 0 0 121 0 h
+.2752 g 2272 2256 N -121 0 0 709 121 0 h
+.1881 g 2272 2965 N -121 0 0 0 121 0 h
+.1009 g 2272 2965 N -121 0 0 500 121 0 h
+.0734 g 2272 3465 N -121 0 0 0 121 0 h
+.0459 g 2272 3465 N -121 0 0 689 121 0 h
+.0642 g 2272 4154 N -121 0 0 0 121 0 h
+.0826 g 2272 4154 N -121 0 0 0 121 0 h
+.0321 g 2393 1125 N 0 0 0 0 0 0 h
+.0161 g 2393 1125 N 0 0 0 0 0 0 h
+0 g 2393 1125 N 0 0 0 4 0 0 h
+.3601 g 2393 1129 N 0 0 0 0 0 0 h
+.7202 g 2393 1129 N 0 16 0 72 0 0 h
+.5803 g 2393 1217 N 0 16 0 0 0 -16 h
+.4404 g 2393 1217 N 0 0 0 59 0 -16 h
+.3555 g 2393 1260 N 0 0 0 0 0 0 h
+.2707 g 2393 1260 N 0 8 0 32 0 0 h
+.3853 g 2393 1300 N 0 8 0 0 0 -8 h
+.5 g 2393 1300 N 0 3 0 84 0 -8 h
+.4083 g 2393 1379 N 0 3 0 0 0 -3 h
+.3165 g 2393 1379 N 0 5 0 96 0 -3 h
+.3234 g 2393 1477 N 0 5 0 0 0 -5 h
+.3303 g 2393 1477 N 0 -19 0 141 0 -5 h
+.3532 g 2393 1594 N 0 -19 0 0 0 19 h
+.3762 g 2393 1594 N 0 -108 0 215 0 19 h
+.328 g 2393 1720 N 0 -108 0 0 0 108 h
+.2798 g 2393 1720 N 0 -188 0 236 0 108 h
+.3188 g 2393 1876 N 0 -188 0 0 0 188 h
+.3578 g 2393 1876 N 0 -363 0 555 0 188 h
+.2707 g 2393 2256 N 0 -363 0 0 0 363 h
+.1835 g 2393 2256 N 0 -152 0 498 0 363 h
+.1537 g 2393 2965 N 0 -152 0 0 0 152 h
+.1239 g 2393 2965 N 0 -689 0 1037 0 152 h
+.1032 g 2393 3465 N 0 -689 0 0 0 689 h
+.0826 g 2393 3465 N 0 0 0 0 0 689 h
+.0459 g 2393 1125 N -120 0 0 0 120 0 h
+.0229 g 2393 1125 N -120 0 0 0 120 0 h
+0 g 2393 1125 N -120 0 0 4 120 0 h
+.2844 g 2393 1129 N -120 0 0 0 120 0 h
+.5688 g 2393 1129 N -120 0 0 72 120 0 h
+.5092 g 2393 1201 N -120 0 0 0 120 0 h
+.4496 g 2393 1201 N -120 0 0 59 120 0 h
+.3441 g 2393 1260 N -120 0 0 0 120 0 h
+.2385 g 2393 1260 N -120 0 0 32 120 0 h
+.3808 g 2393 1292 N -120 0 0 0 120 0 h
+.523 g 2393 1292 N -120 0 0 84 120 0 h
+.4312 g 2393 1376 N -120 0 0 0 120 0 h
+.3395 g 2393 1376 N -120 0 0 96 120 0 h
+.3349 g 2393 1472 N -120 0 0 0 120 0 h
+.3303 g 2393 1472 N -120 0 0 141 120 0 h
+.422 g 2393 1613 N -120 0 0 0 120 0 h
+.5138 g 2393 1613 N -120 0 0 215 120 0 h
+.4175 g 2393 1828 N -120 0 0 0 120 0 h
+.3211 g 2393 1828 N -120 0 0 236 120 0 h
+.3991 g 2393 2064 N -120 0 0 0 120 0 h
+.4771 g 2393 2064 N -120 0 0 555 120 0 h
+.2844 g 2393 2619 N -120 0 0 0 120 0 h
+.0917 g 2393 2619 N -120 0 0 498 120 0 h
+.1193 g 2393 3117 N -120 0 0 0 120 0 h
+.1468 g 2393 3117 N -120 0 0 1037 120 0 h
+.133 g 2393 4154 N -120 0 0 0 120 0 h
+.1193 g 2393 4154 N -120 0 0 0 120 0 h
+.055 g 2513 1125 N 0 0 0 0 0 0 h
+.0275 g 2513 1125 N 0 0 0 0 0 0 h
+0 g 2513 1125 N 0 2 0 2 0 0 h
+.1468 g 2513 1129 N 0 2 0 0 0 -2 h
+.2936 g 2513 1129 N 0 68 0 6 0 -2 h
+.4473 g 2513 1201 N 0 68 0 0 0 -68 h
+.601 g 2513 1201 N 0 62 0 65 0 -68 h
+.578 g 2513 1260 N 0 62 0 0 0 -62 h
+.5551 g 2513 1260 N 0 28 0 66 0 -62 h
+.5826 g 2513 1292 N 0 28 0 0 0 -28 h
+.6101 g 2513 1292 N 0 49 0 63 0 -28 h
+.5 g 2513 1376 N 0 49 0 0 0 -49 h
+.3899 g 2513 1376 N 0 79 0 66 0 -49 h
+.3509 g 2513 1472 N 0 79 0 0 0 -79 h
+.3119 g 2513 1472 N 0 172 0 48 0 -79 h
+.3876 g 2513 1613 N 0 172 0 0 0 -172 h
+.4633 g 2513 1613 N 0 288 0 99 0 -172 h
+.4473 g 2513 1828 N 0 288 0 0 0 -288 h
+.4312 g 2513 1828 N 0 329 0 195 0 -288 h
+.4404 g 2513 2064 N 0 329 0 0 0 -329 h
+.4496 g 2513 2064 N 0 622 0 262 0 -329 h
+.328 g 2513 2619 N 0 622 0 0 0 -622 h
+.2064 g 2513 2619 N 0 831 0 289 0 -622 h
+.2133 g 2513 3117 N 0 831 0 0 0 -831 h
+.2202 g 2513 3117 N 0 1545 0 323 0 -831 h
+.2248 g 2513 4154 N 0 1545 0 0 0 -1545 h
+.2294 g 2513 4154 N 0 944 0 601 0 -1545 h
+.0642 g 2513 1125 N -121 0 0 0 121 0 h
+.0321 g 2513 1125 N -121 0 0 0 121 0 h
+0 g 2513 1125 N -121 0 0 2 121 0 h
+.0092 g 2513 1127 N -121 0 0 0 121 0 h
+.0183 g 2513 1127 N -121 0 0 6 121 0 h
+.3853 g 2513 1133 N -121 0 0 0 121 0 h
+.7523 g 2513 1133 N -121 0 0 65 121 0 h
+.812 g 2513 1198 N -121 0 0 0 121 0 h
+.8716 g 2513 1198 N -121 0 0 66 121 0 h
+.7845 g 2513 1264 N -121 0 0 0 121 0 h
+.6973 g 2513 1264 N -121 0 0 63 121 0 h
+.5688 g 2513 1327 N -121 0 0 0 121 0 h
+.4404 g 2513 1327 N -121 0 0 66 121 0 h
+.367 g 2513 1393 N -121 0 0 0 121 0 h
+.2936 g 2513 1393 N -121 0 0 48 121 0 h
+.3532 g 2513 1441 N -121 0 0 0 121 0 h
+.4129 g 2513 1441 N -121 0 0 99 121 0 h
+.4771 g 2513 1540 N -121 0 0 0 121 0 h
+.5413 g 2513 1540 N -121 0 0 195 121 0 h
+.4817 g 2513 1735 N -121 0 0 0 121 0 h
+.422 g 2513 1735 N -121 0 0 262 121 0 h
+.3716 g 2513 1997 N -121 0 0 0 121 0 h
+.3211 g 2513 1997 N -121 0 0 289 121 0 h
+.3074 g 2513 2286 N -121 0 0 0 121 0 h
+.2936 g 2513 2286 N -121 0 0 323 121 0 h
+.3165 g 2513 2609 N -121 0 0 0 121 0 h
+.3395 g 2513 2609 N -121 0 0 601 121 0 h
+.3119 g 2513 3210 N -121 0 0 0 121 0 h
+.2844 g 2513 3210 N -121 0 0 944 121 0 h
+.2477 g 2513 4154 N -121 0 0 0 121 0 h
+.211 g 2513 4154 N -121 0 0 0 121 0 h
+.0596 g 2634 1125 N 0 0 0 0 0 0 h
+.0344 g 2634 1125 N 0 0 0 0 0 0 h
+.0092 g 2634 1125 N 0 -3 0 5 0 0 h
+.2294 g 2634 1127 N 0 -3 0 0 0 3 h
+.4496 g 2634 1127 N 0 -76 0 79 0 3 h
+.601 g 2634 1133 N 0 -76 0 0 0 76 h
+.7523 g 2634 1133 N 0 -67 0 56 0 76 h
+.6927 g 2634 1198 N 0 -67 0 0 0 67 h
+.6331 g 2634 1198 N 0 -47 0 46 0 67 h
+.5826 g 2634 1264 N 0 -47 0 0 0 47 h
+.5321 g 2634 1264 N 0 -38 0 54 0 47 h
+.539 g 2634 1327 N 0 -38 0 0 0 38 h
+.5459 g 2634 1327 N 0 -80 0 108 0 38 h
+.4565 g 2634 1393 N 0 -80 0 0 0 80 h
+.367 g 2634 1393 N 0 -148 0 116 0 80 h
+.4106 g 2634 1441 N 0 -148 0 0 0 148 h
+.4542 g 2634 1441 N 0 -239 0 190 0 148 h
+.4587 g 2634 1540 N 0 -239 0 0 0 239 h
+.4633 g 2634 1540 N 0 -245 0 201 0 239 h
+.4312 g 2634 1735 N 0 -245 0 0 0 245 h
+.3991 g 2634 1735 N 0 -334 0 351 0 245 h
+.3509 g 2634 1997 N 0 -334 0 0 0 334 h
+.3028 g 2634 1997 N 0 -623 0 578 0 334 h
+.2638 g 2634 2286 N 0 -623 0 0 0 623 h
+.2248 g 2634 2286 N 0 -1075 0 775 0 623 h
+.2225 g 2634 2609 N 0 -1075 0 0 0 1075 h
+.2202 g 2634 2609 N 0 -944 0 470 0 1075 h
+.2156 g 2634 3210 N 0 -944 0 0 0 944 h
+.211 g 2634 3210 N 0 0 0 0 0 944 h
+.055 g 2634 1125 N -121 0 0 0 121 0 h
+.0367 g 2634 1125 N -121 0 0 0 121 0 h
+.0183 g 2634 1125 N -121 0 0 5 121 0 h
+.4496 g 2634 1130 N -121 0 0 0 121 0 h
+.8808 g 2634 1130 N -121 0 0 79 121 0 h
+.8166 g 2634 1209 N -121 0 0 0 121 0 h
+.7523 g 2634 1209 N -121 0 0 56 121 0 h
+.5734 g 2634 1265 N -121 0 0 0 121 0 h
+.3945 g 2634 1265 N -121 0 0 46 121 0 h
+.3808 g 2634 1311 N -121 0 0 0 121 0 h
+.367 g 2634 1311 N -121 0 0 54 121 0 h
+.5092 g 2634 1365 N -121 0 0 0 121 0 h
+.6514 g 2634 1365 N -121 0 0 108 121 0 h
+.5459 g 2634 1473 N -121 0 0 0 121 0 h
+.4404 g 2634 1473 N -121 0 0 116 121 0 h
+.4679 g 2634 1589 N -121 0 0 0 121 0 h
+.4954 g 2634 1589 N -121 0 0 190 121 0 h
+.4404 g 2634 1779 N -121 0 0 0 121 0 h
+.3853 g 2634 1779 N -121 0 0 201 121 0 h
+.3808 g 2634 1980 N -121 0 0 0 121 0 h
+.3762 g 2634 1980 N -121 0 0 351 121 0 h
+.3303 g 2634 2331 N -121 0 0 0 121 0 h
+.2844 g 2634 2331 N -121 0 0 578 121 0 h
+.2202 g 2634 2909 N -121 0 0 0 121 0 h
+.156 g 2634 2909 N -121 0 0 775 121 0 h
+.1284 g 2634 3684 N -121 0 0 0 121 0 h
+.1009 g 2634 3684 N -121 0 0 470 121 0 h
+.1193 g 2634 4154 N -121 0 0 0 121 0 h
+.1376 g 2634 4154 N -121 0 0 0 121 0 h
+.0734 g 2755 1125 N 0 0 0 0 0 0 h
+.0413 g 2755 1125 N 0 0 0 0 0 0 h
+.0092 g 2755 1125 N 0 0 0 5 0 0 h
+.2569 g 2755 1130 N 0 0 0 0 0 0 h
+.5046 g 2755 1130 N 0 66 0 13 0 0 h
+.5115 g 2755 1209 N 0 66 0 0 0 -66 h
+.5184 g 2755 1209 N 0 97 0 25 0 -66 h
+.4863 g 2755 1265 N 0 97 0 0 0 -97 h
+.4542 g 2755 1265 N 0 77 0 66 0 -97 h
+.4771 g 2755 1311 N 0 77 0 0 0 -77 h
+.5 g 2755 1311 N 0 45 0 86 0 -77 h
+.5895 g 2755 1365 N 0 45 0 0 0 -45 h
+.6789 g 2755 1365 N 0 34 0 119 0 -45 h
+.5344 g 2755 1473 N 0 34 0 0 0 -34 h
+.3899 g 2755 1473 N 0 61 0 89 0 -34 h
+.4014 g 2755 1589 N 0 61 0 0 0 -61 h
+.4129 g 2755 1589 N 0 133 0 118 0 -61 h
+.3991 g 2755 1779 N 0 133 0 0 0 -133 h
+.3853 g 2755 1779 N 0 156 0 178 0 -133 h
+.3831 g 2755 1980 N 0 156 0 0 0 -156 h
+.3808 g 2755 1980 N 0 205 0 302 0 -156 h
+.3876 g 2755 2331 N 0 205 0 0 0 -205 h
+.3945 g 2755 2331 N 0 123 0 660 0 -205 h
+.2936 g 2755 2909 N 0 123 0 0 0 -123 h
+.1927 g 2755 2909 N 0 350 0 548 0 -123 h
+.1606 g 2755 3684 N 0 350 0 0 0 -350 h
+.1284 g 2755 3684 N 0 0 0 820 0 -350 h
+.1812 g 2755 4154 N 0 0 0 0 0 0 h
+.234 g 2755 4154 N 0 0 0 0 0 0 h
+.0917 g 2755 1125 N -120 0 0 0 120 0 h
+.0459 g 2755 1125 N -120 0 0 0 120 0 h
+0 g 2755 1125 N -120 0 0 5 120 0 h
+.0642 g 2755 1130 N -120 0 0 0 120 0 h
+.1284 g 2755 1130 N -120 0 0 13 120 0 h
+.2064 g 2755 1143 N -120 0 0 0 120 0 h
+.2844 g 2755 1143 N -120 0 0 25 120 0 h
+.3991 g 2755 1168 N -120 0 0 0 120 0 h
+.5138 g 2755 1168 N -120 0 0 66 120 0 h
+.5734 g 2755 1234 N -120 0 0 0 120 0 h
+.6331 g 2755 1234 N -120 0 0 86 120 0 h
+.6698 g 2755 1320 N -120 0 0 0 120 0 h
+.7065 g 2755 1320 N -120 0 0 119 120 0 h
+.523 g 2755 1439 N -120 0 0 0 120 0 h
+.3395 g 2755 1439 N -120 0 0 89 120 0 h
+.3349 g 2755 1528 N -120 0 0 0 120 0 h
+.3303 g 2755 1528 N -120 0 0 118 120 0 h
+.3578 g 2755 1646 N -120 0 0 0 120 0 h
+.3853 g 2755 1646 N -120 0 0 178 120 0 h
+2755 1824 N -120 0 0 0 120 0 h
+2755 1824 N -120 0 0 302 120 0 h
+.445 g 2755 2126 N -120 0 0 0 120 0 h
+.5046 g 2755 2126 N -120 0 0 660 120 0 h
+.367 g 2755 2786 N -120 0 0 0 120 0 h
+.2294 g 2755 2786 N -120 0 0 548 120 0 h
+.1927 g 2755 3334 N -120 0 0 0 120 0 h
+.156 g 2755 3334 N -120 0 0 820 120 0 h
+.2431 g 2755 4154 N -120 0 0 0 120 0 h
+.3303 g 2755 4154 N -120 0 0 0 120 0 h
+.0596 g 2875 1125 N 0 0 0 0 0 0 h
+.0298 g 2875 1125 N 0 0 0 0 0 0 h
+0 g 2875 1125 N 0 2 0 3 0 0 h
+.2454 g 2875 1130 N 0 2 0 0 0 -2 h
+.4909 g 2875 1130 N 0 -70 0 85 0 -2 h
+.4198 g 2875 1143 N 0 -70 0 0 0 70 h
+.3486 g 2875 1143 N 0 -85 0 40 0 70 h
+.5069 g 2875 1168 N 0 -85 0 0 0 85 h
+.6652 g 2875 1168 N 0 -118 0 99 0 85 h
+.6698 g 2875 1234 N 0 -118 0 0 0 118 h
+.6744 g 2875 1234 N 0 -140 0 108 0 118 h
+.6422 g 2875 1320 N 0 -140 0 0 0 140 h
+.6101 g 2875 1320 N 0 -116 0 95 0 140 h
+.6216 g 2875 1439 N 0 -116 0 0 0 116 h
+.6331 g 2875 1439 N 0 -260 0 233 0 116 h
+.5344 g 2875 1528 N 0 -260 0 0 0 260 h
+.4358 g 2875 1528 N 0 -368 0 226 0 260 h
+.4565 g 2875 1646 N 0 -368 0 0 0 368 h
+.4771 g 2875 1646 N 0 -591 0 401 0 368 h
+.4702 g 2875 1824 N 0 -591 0 0 0 591 h
+.4633 g 2875 1824 N 0 -832 0 543 0 591 h
+.4243 g 2875 2126 N 0 -832 0 0 0 832 h
+.3853 g 2875 2126 N 0 -602 0 430 0 832 h
+.3074 g 2875 2786 N 0 -602 0 0 0 602 h
+.2294 g 2875 2786 N 0 -820 0 766 0 602 h
+.195 g 2875 3334 N 0 -820 0 0 0 820 h
+.1606 g 2875 3334 N 0 0 0 0 0 820 h
+.0275 g 2875 1125 N -121 0 0 0 121 0 h
+.0138 g 2875 1125 N -121 0 0 0 121 0 h
+0 g 2875 1125 N -121 0 0 3 121 0 h
+.4266 g 2875 1128 N -121 0 0 0 121 0 h
+.8533 g 2875 1128 N -121 0 0 85 121 0 h
+.6331 g 2875 1213 N -121 0 0 0 121 0 h
+.4129 g 2875 1213 N -121 0 0 40 121 0 h
+.6147 g 2875 1253 N -121 0 0 0 121 0 h
+.8166 g 2875 1253 N -121 0 0 99 121 0 h
+.7661 g 2875 1352 N -121 0 0 0 121 0 h
+.7156 g 2875 1352 N -121 0 0 108 121 0 h
+.6147 g 2875 1460 N -121 0 0 0 121 0 h
+.5138 g 2875 1460 N -121 0 0 95 121 0 h
+.7202 g 2875 1555 N -121 0 0 0 121 0 h
+.9267 g 2875 1555 N -121 0 0 233 121 0 h
+.734 g 2875 1788 N -121 0 0 0 121 0 h
+.5413 g 2875 1788 N -121 0 0 226 121 0 h
+.5551 g 2875 2014 N -121 0 0 0 121 0 h
+.5688 g 2875 2014 N -121 0 0 401 121 0 h
+.5551 g 2875 2415 N -121 0 0 0 121 0 h
+.5413 g 2875 2415 N -121 0 0 543 121 0 h
+.4037 g 2875 2958 N -121 0 0 0 121 0 h
+.2661 g 2875 2958 N -121 0 0 430 121 0 h
+.2477 g 2875 3388 N -121 0 0 0 121 0 h
+.2294 g 2875 3388 N -121 0 0 766 121 0 h
+.1973 g 2875 4154 N -121 0 0 0 121 0 h
+.1651 g 2875 4154 N -121 0 0 0 121 0 h
+.0183 g 2996 1125 N 0 0 0 0 0 0 h
+.0115 g 2996 1125 N 0 0 0 0 0 0 h
+.0046 g 2996 1125 N 0 -2 0 5 0 0 h
+.3395 g 2996 1128 N 0 -2 0 0 0 2 h
+.6744 g 2996 1128 N 0 28 0 55 0 2 h
+.5941 g 2996 1213 N 0 28 0 0 0 -28 h
+.5138 g 2996 1213 N 0 4 0 64 0 -28 h
+.5803 g 2996 1253 N 0 4 0 0 0 -4 h
+.6468 g 2996 1253 N 0 41 0 62 0 -4 h
+.6262 g 2996 1352 N 0 41 0 0 0 -41 h
+.6055 g 2996 1352 N 0 85 0 64 0 -41 h
+.5413 g 2996 1460 N 0 85 0 0 0 -85 h
+.4771 g 2996 1460 N 0 95 0 85 0 -85 h
+.6239 g 2996 1555 N 0 95 0 0 0 -95 h
+.7707 g 2996 1555 N 0 198 0 130 0 -95 h
+.6537 g 2996 1788 N 0 198 0 0 0 -198 h
+.5367 g 2996 1788 N 0 225 0 199 0 -198 h
+.562 g 2996 2014 N 0 225 0 0 0 -225 h
+.5872 g 2996 2014 N 0 374 0 252 0 -225 h
+.5436 g 2996 2415 N 0 374 0 0 0 -374 h
+.5 g 2996 2415 N 0 600 0 317 0 -374 h
+.4198 g 2996 2958 N 0 600 0 0 0 -600 h
+.3395 g 2996 2958 N 0 403 0 627 0 -600 h
+.2936 g 2996 3388 N 0 403 0 0 0 -403 h
+.2477 g 2996 3388 N 0 789 0 380 0 -403 h
+.2454 g 2996 4154 N 0 789 0 0 0 -789 h
+.2431 g 2996 4154 N 0 0 0 789 0 -789 h
+.0092 g 2996 1125 N -121 0 0 0 121 0 h
+2996 1125 N -121 0 0 0 121 0 h
+2996 1125 N -121 0 0 5 121 0 h
+.2523 g 2996 1130 N -121 0 0 0 121 0 h
+.4954 g 2996 1130 N -121 0 0 55 121 0 h
+.5551 g 2996 1185 N -121 0 0 0 121 0 h
+.6147 g 2996 1185 N -121 0 0 64 121 0 h
+.5459 g 2996 1249 N -121 0 0 0 121 0 h
+.4771 g 2996 1249 N -121 0 0 62 121 0 h
+.4863 g 2996 1311 N -121 0 0 0 121 0 h
+.4954 g 2996 1311 N -121 0 0 64 121 0 h
+.4679 g 2996 1375 N -121 0 0 0 121 0 h
+.4404 g 2996 1375 N -121 0 0 85 121 0 h
+.5276 g 2996 1460 N -121 0 0 0 121 0 h
+.6147 g 2996 1460 N -121 0 0 130 121 0 h
+.5734 g 2996 1590 N -121 0 0 0 121 0 h
+.5321 g 2996 1590 N -121 0 0 199 121 0 h
+.5688 g 2996 1789 N -121 0 0 0 121 0 h
+.6055 g 2996 1789 N -121 0 0 252 121 0 h
+.5321 g 2996 2041 N -121 0 0 0 121 0 h
+.4587 g 2996 2041 N -121 0 0 317 121 0 h
+.4358 g 2996 2358 N -121 0 0 0 121 0 h
+.4129 g 2996 2358 N -121 0 0 627 121 0 h
+.3395 g 2996 2985 N -121 0 0 0 121 0 h
+.2661 g 2996 2985 N -121 0 0 380 121 0 h
+.2936 g 2996 3365 N -121 0 0 0 121 0 h
+.3211 g 2996 3365 N -121 0 0 789 121 0 h
+.4542 g 2996 4154 N -121 0 0 0 121 0 h
+.5872 g 2996 4154 N -121 0 0 0 121 0 h
+.0275 g 3117 1125 N 0 0 0 0 0 0 h
+.0161 g 3117 1125 N 0 0 0 0 0 0 h
+.0046 g 3117 1125 N 0 0 0 5 0 0 h
+.2661 g 3117 1130 N 0 0 0 0 0 0 h
+.5276 g 3117 1130 N 0 -8 0 63 0 0 h
+.4977 g 3117 1185 N 0 -8 0 0 0 8 h
+.4679 g 3117 1185 N 0 35 0 21 0 8 h
+.5184 g 3117 1249 N 0 35 0 0 0 -35 h
+.5688 g 3117 1249 N 0 15 0 82 0 -35 h
+.5069 g 3117 1311 N 0 15 0 0 0 -15 h
+.445 g 3117 1311 N 0 23 0 56 0 -15 h
+.3578 g 3117 1375 N 0 23 0 0 0 -23 h
+.2707 g 3117 1375 N 0 83 0 25 0 -23 h
+.3555 g 3117 1460 N 0 83 0 0 0 -83 h
+.4404 g 3117 1460 N 0 170 0 43 0 -83 h
+.5023 g 3117 1590 N 0 170 0 0 0 -170 h
+.5643 g 3117 1590 N 0 213 0 156 0 -170 h
+.5459 g 3117 1789 N 0 213 0 0 0 -213 h
+.5276 g 3117 1789 N 0 337 0 128 0 -213 h
+.4794 g 3117 2041 N 0 337 0 0 0 -337 h
+.4312 g 3117 2041 N 0 531 0 123 0 -337 h
+.461 g 3117 2358 N 0 531 0 0 0 -531 h
+.4909 g 3117 2358 N 0 906 0 252 0 -531 h
+.4679 g 3117 2985 N 0 906 0 0 0 -906 h
+.445 g 3117 2985 N 0 964 0 322 0 -906 h
+.4335 g 3117 3365 N 0 964 0 0 0 -964 h
+.422 g 3117 3365 N 0 1191 0 562 0 -964 h
+.4702 g 3117 4154 N 0 1191 0 0 0 -1191 h
+.5184 g 3117 4154 N 0 361 0 830 0 -1191 h
+.0459 g 3117 1125 N -120 0 0 0 120 0 h
+.0229 g 3117 1125 N -120 0 0 0 120 0 h
+0 g 3117 1125 N -120 0 0 5 120 0 h
+.2798 g 3117 1130 N -120 0 0 0 120 0 h
+.5597 g 3117 1130 N -120 0 0 63 120 0 h
+.4404 g 3117 1193 N -120 0 0 0 120 0 h
+.3211 g 3117 1193 N -120 0 0 21 120 0 h
+.4909 g 3117 1214 N -120 0 0 0 120 0 h
+.6606 g 3117 1214 N -120 0 0 82 120 0 h
+.5276 g 3117 1296 N -120 0 0 0 120 0 h
+.3945 g 3117 1296 N -120 0 0 56 120 0 h
+.2477 g 3117 1352 N -120 0 0 0 120 0 h
+.1009 g 3117 1352 N -120 0 0 25 120 0 h
+.1835 g 3117 1377 N -120 0 0 0 120 0 h
+.2661 g 3117 1377 N -120 0 0 43 120 0 h
+.4312 g 3117 1420 N -120 0 0 0 120 0 h
+.5964 g 3117 1420 N -120 0 0 156 120 0 h
+.523 g 3117 1576 N -120 0 0 0 120 0 h
+.4496 g 3117 1576 N -120 0 0 128 120 0 h
+.4266 g 3117 1704 N -120 0 0 0 120 0 h
+.4037 g 3117 1704 N -120 0 0 123 120 0 h
+.4863 g 3117 1827 N -120 0 0 0 120 0 h
+.5688 g 3117 1827 N -120 0 0 252 120 0 h
+.5964 g 3117 2079 N -120 0 0 0 120 0 h
+.6239 g 3117 2079 N -120 0 0 322 120 0 h
+.5734 g 3117 2401 N -120 0 0 0 120 0 h
+.523 g 3117 2401 N -120 0 0 562 120 0 h
+.4863 g 3117 2963 N -120 0 0 0 120 0 h
+.4496 g 3117 2963 N -120 0 0 830 120 0 h
+.2661 g 3117 3793 N -120 0 0 0 120 0 h
+.0826 g 3117 3793 N -120 0 0 361 120 0 h
+.2156 g 3117 4154 N -120 0 0 0 120 0 h
+.3486 g 3117 4154 N -120 0 0 0 120 0 h
+.055 g 3237 1125 N 0 0 0 0 0 0 h
+.0275 g 3237 1125 N 0 0 0 0 0 0 h
+0 g 3237 1125 N 0 2 0 3 0 0 h
+.2569 g 3237 1130 N 0 2 0 0 0 -2 h
+.5138 g 3237 1130 N 0 8 0 57 0 -2 h
+.4198 g 3237 1193 N 0 8 0 0 0 -8 h
+.3257 g 3237 1193 N 0 -7 0 36 0 -8 h
+.4335 g 3237 1214 N 0 -7 0 0 0 7 h
+.5413 g 3237 1214 N 0 27 0 48 0 7 h
+.5092 g 3237 1296 N 0 27 0 0 0 -27 h
+.4771 g 3237 1296 N 0 3 0 80 0 -27 h
+.3395 g 3237 1352 N 0 3 0 0 0 -3 h
+.2018 g 3237 1352 N 0 -32 0 60 0 -3 h
+.2661 g 3237 1377 N 0 -32 0 0 0 32 h
+.3303 g 3237 1377 N 0 -83 0 94 0 32 h
+.4381 g 3237 1420 N 0 -83 0 0 0 83 h
+.5459 g 3237 1420 N 0 -85 0 158 0 83 h
+.5459 g 3237 1576 N 0 -85 0 0 0 85 h
+.5459 g 3237 1576 N 0 -199 0 242 0 85 h
+.4977 g 3237 1704 N 0 -199 0 0 0 199 h
+.4496 g 3237 1704 N 0 -326 0 250 0 199 h
+.4886 g 3237 1827 N 0 -326 0 0 0 326 h
+.5276 g 3237 1827 N 0 -434 0 360 0 326 h
+.5115 g 3237 2079 N 0 -434 0 0 0 434 h
+.4954 g 3237 2079 N 0 -594 0 482 0 434 h
+.4748 g 3237 2401 N 0 -594 0 0 0 594 h
+.4542 g 3237 2401 N 0 -1191 0 1159 0 594 h
+.4817 g 3237 2963 N 0 -1191 0 0 0 1191 h
+.5092 g 3237 2963 N 0 -361 0 0 0 1191 h
+.0642 g 3237 1125 N -121 0 0 0 121 0 h
+.0321 g 3237 1125 N -121 0 0 0 121 0 h
+0 g 3237 1125 N -121 0 0 3 121 0 h
+.234 g 3237 1128 N -121 0 0 0 121 0 h
+.4679 g 3237 1128 N -121 0 0 57 121 0 h
+.3991 g 3237 1185 N -121 0 0 0 121 0 h
+.3303 g 3237 1185 N -121 0 0 36 121 0 h
+.3762 g 3237 1221 N -121 0 0 0 121 0 h
+.422 g 3237 1221 N -121 0 0 48 121 0 h
+.4909 g 3237 1269 N -121 0 0 0 121 0 h
+.5597 g 3237 1269 N -121 0 0 80 121 0 h
+.4312 g 3237 1349 N -121 0 0 0 121 0 h
+.3028 g 3237 1349 N -121 0 0 60 121 0 h
+.3486 g 3237 1409 N -121 0 0 0 121 0 h
+.3945 g 3237 1409 N -121 0 0 94 121 0 h
+.445 g 3237 1503 N -121 0 0 0 121 0 h
+.4954 g 3237 1503 N -121 0 0 158 121 0 h
+.5688 g 3237 1661 N -121 0 0 0 121 0 h
+.6422 g 3237 1661 N -121 0 0 242 121 0 h
+.5688 g 3237 1903 N -121 0 0 0 121 0 h
+.4954 g 3237 1903 N -121 0 0 250 121 0 h
+.4909 g 3237 2153 N -121 0 0 0 121 0 h
+.4863 g 3237 2153 N -121 0 0 360 121 0 h
+.4266 g 3237 2513 N -121 0 0 0 121 0 h
+.367 g 3237 2513 N -121 0 0 482 121 0 h
+.3762 g 3237 2995 N -121 0 0 0 121 0 h
+.3853 g 3237 2995 N -121 0 0 1159 121 0 h
+.4771 g 3237 4154 N -121 0 0 0 121 0 h
+.5688 g 3237 4154 N -121 0 0 0 121 0 h
+.0734 g 3358 1125 N 0 0 0 0 0 0 h
+.0367 g 3358 1125 N 0 0 0 0 0 0 h
+0 g 3358 1125 N 0 2 0 1 0 0 h
+.117 g 3358 1128 N 0 2 0 0 0 -2 h
+.234 g 3358 1128 N 0 58 0 1 0 -2 h
+.2018 g 3358 1185 N 0 58 0 0 0 -58 h
+.1697 g 3358 1185 N 0 89 0 5 0 -58 h
+.3005 g 3358 1221 N 0 89 0 0 0 -89 h
+.4312 g 3358 1221 N 0 87 0 50 0 -89 h
+.4404 g 3358 1269 N 0 87 0 0 0 -87 h
+.4496 g 3358 1269 N 0 121 0 46 0 -87 h
+.3785 g 3358 1349 N 0 121 0 0 0 -121 h
+.3074 g 3358 1349 N 0 134 0 47 0 -121 h
+.3693 g 3358 1409 N 0 134 0 0 0 -134 h
+.4312 g 3358 1409 N 0 162 0 66 0 -134 h
+.4656 g 3358 1503 N 0 162 0 0 0 -162 h
+.5 g 3358 1503 N 0 218 0 102 0 -162 h
+.5505 g 3358 1661 N 0 218 0 0 0 -218 h
+.601 g 3358 1661 N 0 298 0 162 0 -218 h
+.5253 g 3358 1903 N 0 298 0 0 0 -298 h
+.4496 g 3358 1903 N 0 361 0 187 0 -298 h
+.3991 g 3358 2153 N 0 361 0 0 0 -361 h
+.3486 g 3358 2153 N 0 560 0 161 0 -361 h
+.3555 g 3358 2513 N 0 560 0 0 0 -560 h
+.3624 g 3358 2513 N 0 661 0 381 0 -560 h
+.3968 g 3358 2995 N 0 661 0 0 0 -661 h
+.4312 g 3358 2995 N 0 1396 0 424 0 -661 h
+.4473 g 3358 4154 N 0 1396 0 0 0 -1396 h
+.4633 g 3358 4154 N 0 804 0 592 0 -1396 h
+.0826 g 3358 1125 N -121 0 0 0 121 0 h
+.0413 g 3358 1125 N -121 0 0 0 121 0 h
+0 g 3358 1125 N -121 0 0 1 121 0 h
+3358 1126 N -121 0 0 0 121 0 h
+3358 1126 N -121 0 0 1 121 0 h
+.0046 g 3358 1127 N -121 0 0 0 121 0 h
+.0092 g 3358 1127 N -121 0 0 5 121 0 h
+.2248 g 3358 1132 N -121 0 0 0 121 0 h
+.4404 g 3358 1132 N -121 0 0 50 121 0 h
+.3899 g 3358 1182 N -121 0 0 0 121 0 h
+.3395 g 3358 1182 N -121 0 0 46 121 0 h
+.3257 g 3358 1228 N -121 0 0 0 121 0 h
+.3119 g 3358 1228 N -121 0 0 47 121 0 h
+.3899 g 3358 1275 N -121 0 0 0 121 0 h
+.4679 g 3358 1275 N -121 0 0 66 121 0 h
+.4863 g 3358 1341 N -121 0 0 0 121 0 h
+.5046 g 3358 1341 N -121 0 0 102 121 0 h
+.5321 g 3358 1443 N -121 0 0 0 121 0 h
+.5597 g 3358 1443 N -121 0 0 162 121 0 h
+.4817 g 3358 1605 N -121 0 0 0 121 0 h
+.4037 g 3358 1605 N -121 0 0 187 121 0 h
+.3074 g 3358 1792 N -121 0 0 0 121 0 h
+.211 g 3358 1792 N -121 0 0 161 121 0 h
+.2844 g 3358 1953 N -121 0 0 0 121 0 h
+.3578 g 3358 1953 N -121 0 0 381 121 0 h
+.4175 g 3358 2334 N -121 0 0 0 121 0 h
+.4771 g 3358 2334 N -121 0 0 424 121 0 h
+.4175 g 3358 2758 N -121 0 0 0 121 0 h
+.3578 g 3358 2758 N -121 0 0 592 121 0 h
+.289 g 3358 3350 N -121 0 0 0 121 0 h
+.2202 g 3358 3350 N -121 0 0 804 121 0 h
+.2156 g 3358 4154 N -121 0 0 0 121 0 h
+.211 g 3358 4154 N -121 0 0 0 121 0 h
+.0459 g 3479 1125 N 0 0 0 0 0 0 h
+.0229 g 3479 1125 N 0 0 0 0 0 0 h
+0 g 3479 1125 N 0 -3 0 4 0 0 h
+.117 g 3479 1126 N 0 -3 0 0 0 3 h
+.234 g 3479 1126 N 0 -82 0 80 0 3 h
+.1743 g 3479 1127 N 0 -82 0 0 0 82 h
+.1147 g 3479 1127 N 0 -169 0 92 0 82 h
+.2133 g 3479 1132 N 0 -169 0 0 0 169 h
+.3119 g 3479 1132 N 0 -181 0 62 0 169 h
+.3005 g 3479 1182 N 0 -181 0 0 0 181 h
+.289 g 3479 1182 N 0 -322 0 187 0 181 h
+.2569 g 3479 1228 N 0 -322 0 0 0 322 h
+.2248 g 3479 1228 N 0 -527 0 252 0 322 h
+.2363 g 3479 1275 N 0 -527 0 0 0 527 h
+.2477 g 3479 1275 N 0 -677 0 216 0 527 h
+.2638 g 3479 1341 N 0 -677 0 0 0 677 h
+.2798 g 3479 1341 N 0 -1129 0 554 0 677 h
+.2867 g 3479 1443 N 0 -1129 0 0 0 1129 h
+.2936 g 3479 1443 N 0 -1893 0 926 0 1129 h
+.25 g 3479 1605 N 0 -1893 0 0 0 1893 h
+.2064 g 3479 1605 N 0 -2362 0 656 0 1893 h
+.156 g 3479 1792 N 0 -2362 0 0 0 2362 h
+.1055 g 3479 1792 N 0 -2201 0 0 0 2362 h
+.0092 g 3479 1125 N -121 0 0 0 121 0 h
+.0046 g 3479 1125 N -121 0 0 0 121 0 h
+0 g 3479 1125 N -121 0 0 4 121 0 h
+.234 g 3479 1129 N -121 0 0 0 121 0 h
+.4679 g 3479 1129 N -121 0 0 80 121 0 h
+.3441 g 3479 1209 N -121 0 0 0 121 0 h
+.2202 g 3479 1209 N -121 0 0 92 121 0 h
+.2018 g 3479 1301 N -121 0 0 0 121 0 h
+.1835 g 3479 1301 N -121 0 0 62 121 0 h
+.211 g 3479 1363 N -121 0 0 0 121 0 h
+.2385 g 3479 1363 N -121 0 0 187 121 0 h
+.1881 g 3479 1550 N -121 0 0 0 121 0 h
+.1376 g 3479 1550 N -121 0 0 252 121 0 h
+.0826 g 3479 1802 N -121 0 0 0 121 0 h
+.0275 g 3479 1802 N -121 0 0 216 121 0 h
+.0413 g 3479 2018 N -121 0 0 0 121 0 h
+.055 g 3479 2018 N -121 0 0 554 121 0 h
+.0413 g 3479 2572 N -121 0 0 0 121 0 h
+.0275 g 3479 2572 N -121 0 0 926 121 0 h
+.0183 g 3479 3498 N -121 0 0 0 121 0 h
+.0092 g 3479 3498 N -121 0 0 656 121 0 h
+.0046 g 3479 4154 N -121 0 0 0 121 0 h
+0 g 3479 4154 N -121 0 0 0 121 0 h
+.0046 g 3600 1125 N 0 0 0 0 0 0 h
+.0023 g 3600 1125 N 0 0 0 0 0 0 h
+0 g 3600 1125 N 0 0 0 4 0 0 h
+.117 g 3600 1129 N 0 0 0 0 0 0 h
+.234 g 3600 1129 N 0 32 0 48 0 0 h
+.172 g 3600 1209 N 0 32 0 0 0 -32 h
+.1101 g 3600 1209 N 0 76 0 48 0 -32 h
+.1009 g 3600 1301 N 0 76 0 0 0 -76 h
+.0917 g 3600 1301 N 0 53 0 85 0 -76 h
+.1055 g 3600 1363 N 0 53 0 0 0 -53 h
+.1193 g 3600 1363 N 0 114 0 126 0 -53 h
+.094 g 3600 1550 N 0 114 0 0 0 -114 h
+.0688 g 3600 1550 N 0 174 0 192 0 -114 h
+.0413 g 3600 1802 N 0 174 0 0 0 -174 h
+.0138 g 3600 1802 N 0 -14 0 404 0 -174 h
+.0206 g 3600 2018 N 0 -14 0 0 0 14 h
+.0275 g 3600 2018 N 0 121 0 419 0 14 h
+.0206 g 3600 2572 N 0 121 0 0 0 -121 h
+.0138 g 3600 2572 N 0 73 0 974 0 -121 h
+.0092 g 3600 3498 N 0 73 0 0 0 -73 h
+.0046 g 3600 3498 N 0 0 0 729 0 -73 h
+.0023 g 3600 4154 N 0 0 0 0 0 0 h
+0 g 3600 4154 N 0 0 0 0 0 0 h
+3600 1125 N -120 0 0 0 120 0 h
+3600 1125 N -120 0 0 0 120 0 h
+3600 1125 N -120 0 0 4 120 0 h
+3600 1129 N -120 0 0 0 120 0 h
+3600 1129 N -120 0 0 48 120 0 h
+3600 1177 N -120 0 0 0 120 0 h
+3600 1177 N -120 0 0 48 120 0 h
+3600 1225 N -120 0 0 0 120 0 h
+3600 1225 N -120 0 0 85 120 0 h
+3600 1310 N -120 0 0 0 120 0 h
+3600 1310 N -120 0 0 126 120 0 h
+3600 1436 N -120 0 0 0 120 0 h
+3600 1436 N -120 0 0 192 120 0 h
+3600 1628 N -120 0 0 0 120 0 h
+3600 1628 N -120 0 0 404 120 0 h
+3600 2032 N -120 0 0 0 120 0 h
+3600 2032 N -120 0 0 419 120 0 h
+3600 2451 N -120 0 0 0 120 0 h
+3600 2451 N -120 0 0 974 120 0 h
+3600 3425 N -120 0 0 0 120 0 h
+3600 3425 N -120 0 0 729 120 0 h
+3600 4154 N -120 0 0 0 120 0 h
+3600 4154 N -120 0 0 0 120 0 h
+3720 1125 N 0 0 0 0 0 0 h
+3720 1125 N 0 0 0 0 0 0 h
+3720 1125 N 0 2 0 2 0 0 h
+3720 1129 N 0 2 0 0 0 -2 h
+3720 1129 N 0 -7 0 57 0 -2 h
+3720 1177 N 0 -7 0 0 0 7 h
+3720 1177 N 0 4 0 37 0 7 h
+3720 1225 N 0 4 0 0 0 -4 h
+3720 1225 N 0 -31 0 120 0 -4 h
+3720 1310 N 0 -31 0 0 0 31 h
+3720 1310 N 0 -51 0 146 0 31 h
+3720 1436 N 0 -51 0 0 0 51 h
+3720 1436 N 0 -105 0 246 0 51 h
+3720 1628 N 0 -105 0 0 0 105 h
+3720 1628 N 0 120 0 179 0 105 h
+3720 2032 N 0 120 0 0 0 -120 h
+3720 2032 N 0 -47 0 586 0 -120 h
+3720 2451 N 0 -47 0 0 0 47 h
+3720 2451 N 0 -729 0 1656 0 47 h
+3720 1125 N -121 0 0 0 121 0 h
+3720 1125 N -121 0 0 0 121 0 h
+3720 1125 N -121 0 0 2 121 0 h
+3720 1127 N -121 0 0 0 121 0 h
+3720 1127 N -121 0 0 57 121 0 h
+3720 1184 N -121 0 0 0 121 0 h
+3720 1184 N -121 0 0 37 121 0 h
+3720 1221 N -121 0 0 0 121 0 h
+3720 1221 N -121 0 0 120 121 0 h
+3720 1341 N -121 0 0 0 121 0 h
+3720 1341 N -121 0 0 146 121 0 h
+3720 1487 N -121 0 0 0 121 0 h
+3720 1487 N -121 0 0 246 121 0 h
+3720 1733 N -121 0 0 0 121 0 h
+3720 1733 N -121 0 0 179 121 0 h
+3720 1912 N -121 0 0 0 121 0 h
+3720 1912 N -121 0 0 586 121 0 h
+3720 2498 N -121 0 0 0 121 0 h
+3720 2498 N -121 0 0 1656 121 0 h
+3841 1125 N 0 0 0 0 0 0 h
+3841 1125 N 0 0 0 0 0 0 h
+3841 1125 N 0 -3 0 5 0 0 h
+3841 1127 N 0 -3 0 0 0 3 h
+3841 1127 N 0 30 0 24 0 3 h
+3841 1184 N 0 30 0 0 0 -30 h
+3841 1184 N 0 -6 0 73 0 -30 h
+3841 1221 N 0 -6 0 0 0 6 h
+3841 1221 N 0 7 0 107 0 6 h
+3841 1341 N 0 7 0 0 0 -7 h
+3841 1341 N 0 35 0 118 0 -7 h
+3841 1487 N 0 35 0 0 0 -35 h
+3841 1487 N 0 107 0 174 0 -35 h
+3841 1733 N 0 107 0 0 0 -107 h
+3841 1733 N 0 -39 0 325 0 -107 h
+3841 1912 N 0 -39 0 0 0 39 h
+3841 1912 N 0 -313 0 860 0 39 h
+3841 2498 N 0 -313 0 0 0 313 h
+3841 2498 N 0 0 0 1343 0 313 h
+3841 1125 N -121 0 0 0 121 0 h
+3841 1125 N -121 0 0 0 121 0 h
+3841 1125 N -121 0 0 5 121 0 h
+3841 1130 N -121 0 0 0 121 0 h
+3841 1130 N -121 0 0 24 121 0 h
+3841 1154 N -121 0 0 0 121 0 h
+3841 1154 N -121 0 0 73 121 0 h
+3841 1227 N -121 0 0 0 121 0 h
+3841 1227 N -121 0 0 107 121 0 h
+3841 1334 N -121 0 0 0 121 0 h
+3841 1334 N -121 0 0 118 121 0 h
+3841 1452 N -121 0 0 0 121 0 h
+3841 1452 N -121 0 0 174 121 0 h
+3841 1626 N -121 0 0 0 121 0 h
+3841 1626 N -121 0 0 325 121 0 h
+3841 1951 N -121 0 0 0 121 0 h
+3841 1951 N -121 0 0 860 121 0 h
+3841 2811 N -121 0 0 0 121 0 h
+3841 2811 N -121 0 0 1343 121 0 h
+3841 4154 N -121 0 0 0 121 0 h
+3841 4154 N -121 0 0 0 121 0 h
+3962 1125 N 0 0 0 0 0 0 h
+3962 1125 N 0 0 0 0 0 0 h
+3962 1125 N 0 0 0 5 0 0 h
+3962 1130 N 0 0 0 0 0 0 h
+3962 1130 N 0 -2 0 26 0 0 h
+3962 1154 N 0 -2 0 0 0 2 h
+3962 1154 N 0 -27 0 98 0 2 h
+3962 1227 N 0 -27 0 0 0 27 h
+3962 1227 N 0 -33 0 113 0 27 h
+3962 1334 N 0 -33 0 0 0 33 h
+3962 1334 N 0 -135 0 220 0 33 h
+3962 1452 N 0 -135 0 0 0 135 h
+3962 1452 N 0 -288 0 327 0 135 h
+3962 1626 N 0 -288 0 0 0 288 h
+3962 1626 N 0 -710 0 747 0 288 h
+3962 1951 N 0 -710 0 0 0 710 h
+3962 1951 N 0 -1343 0 1493 0 710 h
+3962 1125 N -120 0 0 0 120 0 h
+3962 1125 N -120 0 0 0 120 0 h
+3962 1125 N -120 0 0 5 120 0 h
+3962 1130 N -120 0 0 0 120 0 h
+3962 1130 N -120 0 0 26 120 0 h
+3962 1156 N -120 0 0 0 120 0 h
+3962 1156 N -120 0 0 98 120 0 h
+3962 1254 N -120 0 0 0 120 0 h
+3962 1254 N -120 0 0 113 120 0 h
+3962 1367 N -120 0 0 0 120 0 h
+3962 1367 N -120 0 0 220 120 0 h
+3962 1587 N -120 0 0 0 120 0 h
+3962 1587 N -120 0 0 327 120 0 h
+3962 1914 N -120 0 0 0 120 0 h
+3962 1914 N -120 0 0 747 120 0 h
+3962 2661 N -120 0 0 0 120 0 h
+3962 2661 N -120 0 0 1493 120 0 h
+4082 1125 N 0 0 0 0 0 0 h
+4082 1125 N 0 0 0 0 0 0 h
+4082 1125 N 0 3 0 2 0 0 h
+4082 1130 N 0 3 0 0 0 -3 h
+4082 1130 N 0 -41 0 70 0 -3 h
+4082 1156 N 0 -41 0 0 0 41 h
+4082 1156 N 0 -30 0 87 0 41 h
+4082 1254 N 0 -30 0 0 0 30 h
+4082 1254 N 0 -86 0 169 0 30 h
+4082 1367 N 0 -86 0 0 0 86 h
+4082 1367 N 0 -104 0 238 0 86 h
+4082 1587 N 0 -104 0 0 0 104 h
+4082 1587 N 0 -544 0 767 0 104 h
+4082 1914 N 0 -544 0 0 0 544 h
+4082 1914 N 0 -1493 0 1696 0 544 h
+4082 1125 N -121 0 0 0 121 0 h
+4082 1125 N -121 0 0 0 121 0 h
+4082 1125 N -121 0 0 2 121 0 h
+4082 1127 N -121 0 0 0 121 0 h
+4082 1127 N -121 0 0 70 121 0 h
+4082 1197 N -121 0 0 0 121 0 h
+4082 1197 N -121 0 0 87 121 0 h
+4082 1284 N -121 0 0 0 121 0 h
+4082 1284 N -121 0 0 169 121 0 h
+4082 1453 N -121 0 0 0 121 0 h
+4082 1453 N -121 0 0 238 121 0 h
+4082 1691 N -121 0 0 0 121 0 h
+4082 1691 N -121 0 0 767 121 0 h
+4082 2458 N -121 0 0 0 121 0 h
+4082 2458 N -121 0 0 1696 121 0 h
+4203 1125 N 0 0 0 0 0 0 h
+4203 1125 N 0 0 0 0 0 0 h
+4203 1125 N 0 -74 0 76 0 0 h
+4203 1127 N 0 -74 0 0 0 74 h
+4203 1127 N 0 -55 0 51 0 74 h
+4203 1197 N 0 -55 0 0 0 55 h
+4203 1197 N 0 -89 0 121 0 55 h
+4203 1284 N 0 -89 0 0 0 89 h
+4203 1284 N 0 -214 0 294 0 89 h
+4203 1453 N 0 -214 0 0 0 214 h
+4203 1453 N 0 -584 0 608 0 214 h
+4203 1691 N 0 -584 0 0 0 584 h
+4203 1691 N 0 -1696 0 1879 0 584 h
+4203 1125 N -121 0 0 0 121 0 h
+4203 1125 N -121 0 0 0 121 0 h
+4203 1125 N -121 0 0 76 121 0 h
+4203 1201 N -121 0 0 0 121 0 h
+4203 1201 N -121 0 0 51 121 0 h
+4203 1252 N -121 0 0 0 121 0 h
+4203 1252 N -121 0 0 121 121 0 h
+4203 1373 N -121 0 0 0 121 0 h
+4203 1373 N -121 0 0 294 121 0 h
+4203 1667 N -121 0 0 0 121 0 h
+4203 1667 N -121 0 0 608 121 0 h
+4203 2275 N -121 0 0 0 121 0 h
+4203 2275 N -121 0 0 1879 121 0 h
+4324 1125 N 0 0 0 0 0 0 h
+4324 1125 N 0 0 0 0 0 0 h
+4324 1125 N 0 24 0 52 0 0 h
+4324 1201 N 0 24 0 0 0 -24 h
+4324 1201 N 0 -23 0 98 0 -24 h
+4324 1252 N 0 -23 0 0 0 23 h
+4324 1252 N 0 -89 0 187 0 23 h
+4324 1373 N 0 -89 0 0 0 89 h
+4324 1373 N 0 -174 0 379 0 89 h
+4324 1667 N 0 -174 0 0 0 174 h
+4324 1667 N 0 -1879 0 2313 0 174 h
+4324 1125 N -120 0 0 0 120 0 h
+4324 1125 N -120 0 0 0 120 0 h
+4324 1125 N -120 0 0 52 120 0 h
+4324 1177 N -120 0 0 0 120 0 h
+4324 1177 N -120 0 0 98 120 0 h
+4324 1275 N -120 0 0 0 120 0 h
+4324 1275 N -120 0 0 187 120 0 h
+4324 1462 N -120 0 0 0 120 0 h
+4324 1462 N -120 0 0 379 120 0 h
+4324 1841 N -120 0 0 0 120 0 h
+4324 1841 N -120 0 0 2313 120 0 h
+4444 1125 N 0 0 0 0 0 0 h
+4444 1125 N 0 0 0 0 0 0 h
+4444 1125 N 0 42 0 10 0 0 h
+4444 1177 N 0 42 0 0 0 -42 h
+4444 1177 N 0 17 0 123 0 -42 h
+4444 1275 N 0 17 0 0 0 -17 h
+4444 1275 N 0 11 0 193 0 -17 h
+4444 1462 N 0 11 0 0 0 -11 h
+4444 1462 N 0 203 0 187 0 -11 h
+4444 1841 N 0 203 0 0 0 -203 h
+4444 1841 N 0 0 0 2516 0 -203 h
+4444 1125 N -121 0 0 0 121 0 h
+4444 1125 N -121 0 0 0 121 0 h
+4444 1125 N -121 0 0 10 121 0 h
+4444 1135 N -121 0 0 0 121 0 h
+4444 1135 N -121 0 0 123 121 0 h
+4444 1258 N -121 0 0 0 121 0 h
+4444 1258 N -121 0 0 193 121 0 h
+4444 1451 N -121 0 0 0 121 0 h
+4444 1451 N -121 0 0 187 121 0 h
+4444 1638 N -121 0 0 0 121 0 h
+4444 1638 N -121 0 0 2516 121 0 h
+4565 1125 N 0 -221 0 221 0 0 h
+4565 1125 N 0 -221 0 0 0 221 h
+4565 1125 N 0 -314 0 103 0 221 h
+4565 1135 N 0 -314 0 0 0 314 h
+4565 1135 N 0 -978 0 787 0 314 h
+4565 1258 N 0 -978 0 0 0 978 h
+4565 1258 N 0 -2703 0 1918 0 978 h
+4565 1125 N -121 0 0 221 121 0 h
+4565 1346 N -121 0 0 0 121 0 h
+4565 1346 N -121 0 0 103 121 0 h
+4565 1449 N -121 0 0 0 121 0 h
+4565 1449 N -121 0 0 787 121 0 h
+4565 2236 N -121 0 0 0 121 0 h
+4565 2236 N -121 0 0 1918 121 0 h
+4686 1125 N 0 39 0 182 0 0 h
+4686 1346 N 0 39 0 0 0 -39 h
+4686 1346 N 0 -191 0 333 0 -39 h
+4686 1449 N 0 -191 0 0 0 191 h
+4686 1449 N 0 80 0 516 0 191 h
+4686 2236 N 0 80 0 0 0 -80 h
+4686 2236 N 0 0 0 1998 0 -80 h
+4686 1125 N -120 0 0 182 120 0 h
+4686 1307 N -120 0 0 0 120 0 h
+4686 1307 N -120 0 0 333 120 0 h
+4686 1640 N -120 0 0 0 120 0 h
+4686 1640 N -120 0 0 516 120 0 h
+4686 2156 N -120 0 0 0 120 0 h
+4686 2156 N -120 0 0 1998 120 0 h
+4806 1125 N 0 182 0 0 0 0 h
+4806 1307 N 0 182 0 0 0 -182 h
+4806 1307 N 0 328 0 187 0 -182 h
+4806 1640 N 0 328 0 0 0 -328 h
+4806 1640 N 0 565 0 279 0 -328 h
+4806 2156 N 0 565 0 0 0 -565 h
+4806 2156 N 0 0 0 2563 0 -565 h
+4806 1125 N -121 0 0 0 121 0 h
+4806 1125 N -121 0 0 0 121 0 h
+4806 1125 N -121 0 0 187 121 0 h
+4806 1312 N -121 0 0 0 121 0 h
+4806 1312 N -121 0 0 279 121 0 h
+4806 1591 N -121 0 0 0 121 0 h
+4806 1591 N -121 0 0 2563 121 0 h
+4927 1125 N 0 -208 0 208 0 0 h
+4927 1125 N 0 -208 0 0 0 208 h
+4927 1125 N 0 -616 0 595 0 208 h
+4927 1312 N 0 -616 0 0 0 616 h
+4927 1312 N 0 -2563 0 2226 0 616 h
+4927 1125 N -121 0 0 208 121 0 h
+4927 1333 N -121 0 0 0 121 0 h
+4927 1333 N -121 0 0 595 121 0 h
+4927 1928 N -121 0 0 0 121 0 h
+4927 1928 N -121 0 0 2226 121 0 h
+5048 1125 N 0 -14 0 222 0 0 h
+5048 1333 N 0 -14 0 0 0 14 h
+5048 1333 N 0 -2226 0 2807 0 14 h
+5048 1125 N -120 0 0 222 120 0 h
+5048 1347 N -120 0 0 0 120 0 h
+5048 1347 N -120 0 0 2807 120 0 h
+5168 1125 N 0 132 0 90 0 0 h
+5168 1347 N 0 132 0 0 0 -132 h
+5168 1347 N 0 0 0 2939 0 -132 h
+5168 1125 N -121 0 0 90 121 0 h
+5168 1215 N -121 0 0 0 121 0 h
+5168 1215 N -121 0 0 2939 121 0 h
+5289 1125 N 0 -68 0 158 0 0 h
+5289 1215 N 0 -68 0 0 0 68 h
+5289 1215 N 0 0 0 2871 0 68 h
+5289 1125 N -121 0 0 158 121 0 h
+5289 1283 N -121 0 0 0 121 0 h
+5289 1283 N -121 0 0 2871 121 0 h
+5410 1125 N 0 -2871 0 3029 0 0 h
+5410 1125 N -120 0 0 3029 120 0 h
+5530 1125 N 0 0 0 3029 0 0 h
+5530 1125 N -121 0 0 3029 121 0 h
+5651 1125 N 0 0 0 3029 0 0 h
+5651 1125 N -121 0 0 3029 121 0 h
+5772 1125 N 0 0 0 3029 0 0 h
+5772 1125 N -120 0 0 3029 120 0 h
+5892 1125 N 0 0 0 3029 0 0 h
+5892 1125 N -121 0 0 3029 121 0 h
+%pm3d_map_end
+stroke gsave	%% draw gray scale smooth box
+maxcolors 0 gt {/imax maxcolors def} {/imax 1024 def} ifelse
+6134 1125 translate 241 3029 scale 0 setlinewidth
+/ystep 1 imax div def /y0 0 def /ii 0 def
+{ y0 g 0 y0 N 1 0 V 0 ystep V -1 0 f
+/y0 y0 ystep add def /ii ii 1 add def
+ii imax ge {exit} if } loop
+grestore 0 setgray
+1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6134 1125 N
+241 0 V
+0 3029 V
+-241 0 V
+0 -3029 V
+Z stroke
+1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UL
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6375 1125 M
+-63 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6375 1503 M
+-63 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6375 1882 M
+-63 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6375 2260 M
+-63 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6375 2639 M
+-63 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6375 3018 M
+-63 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6375 3396 M
+-63 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6375 3775 M
+-63 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 6375 4154 M
+-63 0 V
+stroke
+LT0
+LC0 setrgbcolor
+0.31 0.31 0.31 C 1.000 UP
+grestore % colour palette end
+stroke
+grestore
+end
+showpage
+%%Trailer

@@ -1,0 +1,202 @@
+\part{De Novo Interpretation of Tandem Mass Spectra}
+
+%%\begin{flushright}
+%%\parbox[h]{4in}{\small\em
+%%Thermodynamics is a funny subject.\\
+%%The first time you go 
+%%through it, you don't understand it at all.\\
+%%The second time you go 
+%%through it, you think you understand it, except for one or two 
+%%small points. \\
+%%The third time you go through it, you know you 
+%%don't understand it, but by that time you are so used to it, it 
+%%doesn't bother you anymore.
+%%\begin{flushright} Arnold Sommerfeld.\end{flushright}
+%%}
+%%\end{flushright}
+
+\sectionnonum{Introduction to the Problem}
+\thispagestyle{plain}
+
+\lettrine{T}{he} first part of the thesis deals with the application of
+statistical mechanics methods to the interpretation of the experimental spectra
+obtained with the Tandem Mass Spectrometry technique (usually abbreviated as
+MS/MS, or MS2). The interest for the subject is two-fold: from a purely
+theoretical point of view, we will show that the problem of the interpretation
+of noisy MS/MS spectra can be mapped on the search for the equilibrium
+distribution of the states of a suitably-designed one-dimensional lattice
+system. The latter can be solved exactly, by a transfer-matrix technique, under
+some approximations that we will discuss in Chapters \ref{chap:alg}. 
+On the other hand, MS/MS spectra interpretation is nowadays  a key step 
+%one of the main experimental techniques involved 
+in high-throughput peptide and protein sequencing, a central subject in many
+proteomics studies, with important implications also for genomics and
+metabolomics.  To provide  the reader with a better understanding of the
+relevance of the experimental technique, in the following we give an overview of
+the application of MS/MS to proteomics.
+
+Even if several definitions have been proposed, we can simply say that
+proteomics is the study of the proteome of an organism: that is, the
+identification of all possible protein contents of a cell, and their
+characterization in terms of quantity, structure, function, and molecular
+interactions. 
+
+Proteomics arises as the ``natural'' counterpart, in the protein domain, of
+genomics, that studies the genetic information of an organism.
+Indeed,  sometimes the proteome has been simply identified as the protein
+expression of the genome\cite{wilkins1996b,hochstrasser1998}. This view  is due
+to the fact that the entire information, characterizing
+the biochemical processes of any living system, is supposed 
+to lay inside the genetic code; moreover, it is also fostered by the  enormous
+growth of genetic data that have been collected in recent years, with the
+complete decoding of the genomes of several organisms.
+
+However, the above view is somewhat restrictive and incomplete, since it
+suggests that protein content is
+univocally defined from the genetic code, and a direct map can be performed
+between genome and proteome.
+In reality the information coded in the DNA undergoes several levels 
+of modifications until it reaches the final state of usable protein.
+During DNA transcription, information coded into DNA is copied to the mRNA,
+which, in eukaryotes, can
+undergo some post-transcriptional modifications  and intron splicing.
+Moreover, the protein, obtained upon the translation of mRNA often undergoes 
+some post-translational modifications, mainly consisting in the addition of cofactors
+or  small chemical groups, which are related to its function.
+
+This transcription-translation-modification process, in turn, is controlled by
+the type and amount of the proteins and signalling molecules that are present in
+the cell, providing a complex feedback mechanism that regulates any cell
+activity. As a result,
+the proteome of any organism is highly dynamic and changes over time; the types of
+expressed proteins, their abundance, state of modification, sub-cellular location,
+etc. depend on the physiological state of the cell, on the cell location
+and on the tissue the cell belongs to, thus modifying and
+giving a inherent and time-dependent structure to the static, overall
+information that can be obtained by simply translating the genes into protein
+sequences.
+
+Needless to say, accessing the dynamical information on the changing protein
+content of a cell is even more important that the static knowledge of its
+genetic information, to shed light on how a cell functions at the molecular
+level, how it reacts to adjust to external conditions, how we can distinguish  a
+tumor cell from a normal one, just to mention a few possible questions.
+
+
+For the above reasons, a fundamental goal in proteomics is represented by the complete
+analysis of the protein content of a given sample, and answering a number of qualitative and
+quantitative questions about the cell-sample content.
+%It {\bf studies }
+%provides information on the actual protein content as on the expression of the
+%single proteins at a certain moment. 
+%
+%It can be used to study different cell
+%events such as post translational modifications (PTMs) or protein mutation.
+%It will be useful in phylogenetic investigations and...?????
+Such analysis begins with the identification of the proteins expressed in a
+cell, together with the post-translational modifications they carry: the latter
+can provide important information, that cannot be read from the genome, on the
+biological processes in which the protein is involved.
+
+Several methods can be used to identify proteins, depending on the degree of
+previous knowledge available: if the question is to find out if a known protein
+is present in a mixture of a few proteins, low resolution techniques can be
+sufficient,  consisting in a purification step to isolate the protein of
+interest from the rest (for instance, by gel electrophoresis or mass
+spectrometry), plus an identification test probing its interaction with a
+suitable substrate (for instance, using antibody probes, as in Western Blotting
+or ELISA tests).
+
+Another intermediate resolution technique is protein fingerprinting, consisting
+in cutting the protein of interest, proceeding from of a certain organism, into
+smaller peptides, with some specific enzyme acting in a known way (for instance,
+cleaving at every occurrence of a particular amino-acid), and measuring the mass
+of the resulting peptides. Identification is then performed by matching the
+protein and peptide masses to those obtained by considering the database of all
+the proteins of that organism, simulating the action of the enzyme on each of
+them, an calculating the mass of the resulting peptides. This technique is very
+efficient provided that the original sample contained a well purified protein
+and not a mixture,  and, obviously, if the database of all the possible
+proteins, usually derived from the knowledge of the genome of the organism, is
+available.  
+
+However, at the bottom line, if no previous knowledge on the possible sequences
+is available, direct sequencing is the only possibility to identify the primary
+structure of a protein.
+Until the decade of the nineties, Edman degradation was the only available
+technique to that goal. In this approach, amino-acid residues are chemically
+removed and identified one by one, starting from the N-term of the protein.
+This technique is very precise, but also too slow to be applied in
+high-throughput proteomics.
+On the other hand, Tandem Mass Spectrometry allows the analysis of a protein in a
+few seconds, it is able to detect post translational modification, and is
+therefore the technique of choice in high-throughput proteomics.
+However, its accuracy is often jeopardized by the fact that the resulting
+spectra can be quite noisy, difficulting \emph{de-novo} and also database
+assisted interpretation.
+
+In the next chapters we will discuss in more details the experimental technique,
+the present interpretation strategies, and our proposal for a \emph{de-novo}
+interpretation, not relying on a protein database.
+
+%\paragraph{Tandem Mass Spectrometry}
+
+In Chap. \ref{chap:msms} we will introduce shortly the technique of Tandem
+Mass Spectrometry (MS/MS) and the instrumentation used to identify proteins
+and mixtures of proteins.
+Namely, we will describe the experimental workflow based on proteins
+purification, cleavage and separation, that yields
+the ionized peptides, called precursors, that are then fragmented and
+recollected on the experimental spectrum, ordered on the basis of the
+mass-to-charge ratio.
+
+The resulting huge number of experimental spectra must be
+interpreted independently, generally by the use of an external software.
+In the second part of Chap. \ref{chap:msms} we will describe the different types
+of software,
+focusing on the difference between database-based sequencing tools (the most
+popular),
+and \emph{de-novo} sequencing algorithms.
+
+%\paragraph{T-novoMS Approach}
+Then we will introduce a new approach to the problem of data interpretation.
+In particular, in Chap.~\ref{chap:alg}, the identification of the
+residue sequence, underlying a given spectrum, is turned into the study of the 
+equilibrium of a
+unidimensional statistical mechanics system,
+with an energy function containing the experimental spectrum as an external field.
+The search of the amino acid sequence that most likely produced the
+target spectrum, can then be approached with the classical tools of
+statistical mechanics, by looking for the equilibrium distribution
+of the system; the solution for
+the latter at low
+temperature can give us an insight in the most probable peptide sequence.
+Moreover, the study of the equilibrium state at higher temperature informs 
+on the energy landscape induced by the target spectrum on the sequence space; 
+this allows the introduction of a quality test for the prediction.
+
+We will discuss how the equilibrium state can be exactly calculated, and which
+are the relevant thermodynamic observables that allow us to identify the
+sequence of the precursor and to evaluate the quality of the prediction, when
+possible.
+
+In chapters \ref{chap:db} and \ref{chap:pot} we will define and discuss a suitable 
+cost function to map the sequencing problem
+to the unidimensional statistical system described above.
+The cost function will be based on the phenomenological distributions of the spectrum peaks
+calculated from a known and reliable database. 
+
+We will discuss in Chap. \ref{chap:db} the selection, filtering and processing
+of some freely available spectral databases, to characterize the
+phenomenological distribution of the peaks corresponding to the different
+possible fragments.
+In Chap. \ref{chap:pot} we will discuss the definition of an empirical energy
+function based on the results of Chap. \ref{chap:db}.
+
+Finally, Chap. \ref{chap:msms-results} is dedicated to the presentation of the
+results of the application of our method to a test database of spectra, and to
+the comparison of its performance with that of other \emph{de-novo} methods,
+outlining the possible direction for future developments.
+
+
+

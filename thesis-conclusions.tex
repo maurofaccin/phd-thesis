@@ -1,0 +1,149 @@
+\chapternonum{Conclusions}
+
+
+To conclude we would like to summarize  the most important findings exposed in the
+two part of this Thesis,  as well as to present some perspectives that arise from
+the results.
+This Thesis deals with the  application of
+analytical and computational methods, typical of statistical mechanics, to
+biological problems, and shows that, if the latter can be 
+%If the biological subject is 
+successfully mapped onto a statistical-mechanical system,
+the powerful tools of this field can be applied to the study of biologically relevant systems 
+%the system for 
+yielding   qualitative and even quantitative predictions.
+
+The first, and sometimes most important step in this approach,
+% to the biological problem through statistical methods 
+is to find  the best mapping of the original problem on a physical system whose   
+%in first to a system expressible in terms of probability distributions via the definition of a 
+energy-function describes all the relevant interactions and constraints of the original model, and at the same time is simple enough to be conveniently  dealt with by analytical or numerical methods.
+% in that will describe the former systems constraints and behaviours.
+
+In this Thesis we have applied this approach to two apparently different
+biological problem: in the first we have approached the problem of  peptide
+sequencing from Tandem Mass Spectrometry, while in the second we have
+analysed the folding behaviour of the small repeat protein Myotrophin.
+
+These problems have been mapped to a unidimensional statistical system with interactions that are either local, with only
+% ,  which, under an energy-function transcription that lead to a system with only
+nearest neighbours interaction, or that can be reduced to block interactions: in both cases, they are amenable  
+%results to be amenable with 
+to an exact calculation of the equilibrium
+distribution through the application of the transfer-matrix approach. 
+
+\paragraph{Protein Sequencing}
+In the first part we have introduced the problem of peptide sequencing by Tandem
+Mass Spectrometry, which represents an important challenge in Proteomics. 
+Tandem Mass Spectrometry is a common, fast  and reliable technique that provides a mass spectrum
+fingerprint of a peptide, containing the necessary information to infer the
+residue sequence of the target peptide.
+Tandem Mass Spectrometry, thanks to his simplicity and relative low cost, is vastly used,
+generally embedded in an automated high-throughput pipeline.
+This lead to a huge amount of data to be recollected and to the need for a machine-driven
+tool for their interpretation, a task complicated by the presence of noise or missing peaks.
+
+The present approach to the interpretation problem relies mainly on database-searching algorithms, that are the most effective in ``standard situations'', when the unknown protein sequence is present in the protein sequence database or proceeds from an already sequenced genome. However, these algorithms  become inefficient or even confusing if used in non-standard situations when there is no previous database knowledge of the protein, or the latter has undergone important mutations or post-translational modifications. Alternatively, {\sl de-novo} algorithms do no suffer from these limitations, but their search space is much bigger, and are more easily fooled by noisy or missing peaks, so that the quality of their predictions is usually much lower. Finally, the problem of the assessment of the quality of the predictions is an important and substantially unsolved problem, common to both strategies.
+
+Our {\sl de-novo} approach in dealing  with this challenging problem relies, on one hand, on 
+the mapping of the sequencing problem on the the study of  the equilibrium behaviour of a physical
+system, for which we design a suitable  \emph{ad-hoc} potential derived from the analysis of  
+%the database learning of
+the typical ions distributions  in the spectrum space, and, on the other hand, on the exact
+calculation of the partition function and other relevant thermodynamic variables
+of the system, from which the precursor sequence can be inferred.
+% We write then a energy-function of the unidimensional system where the dynamic
+% variable represent the presence of a peptide bond.
+
+The  resulting method \ournovo~ introduces a fictitious temperature as a parameter
+of the algorithm.
+The latter, as in a real thermodynamic system, behaves as a switch
+controlling the amount of
+fluctuations and discerning two main regimes: the low temperature regime where
+the system is trapped in the energy minimum reflecting the information included
+in the target spectrum, and the high temperature regime
+where it explores  a bigger part of the configuration space.
+In this way, at low temperature our algorithm is similar to other \emph{de novo} 
+softwares and produces a prediction of the sequence that best fits the spectrum.
+At higher temperatures, it explores suboptimal regions of the sequence space, 
+which can be used to asses the validity of the prediction.
+
+The algorithm has been tested against a reliable database of double charged
+peptide spectra and on the same database have been tested some of the
+available \emph{de-novo} software (NovoHMM, PepNovo, Lutefisk).
+Our algorithm %, although it does not excel in precision, 
+produces results
+comparable with the existing {\sl de-novo} softwares (even if it doesn't reach the performance of the best one),  while it exhibits some useful features that lack in the others.
+%absent otherwise.
+The most outstanding feature is the temperature control that, combined with the
+possibility to calculate exactly the probability distribution,  provides the user also with a probability profile that  accounts at once for the whole sequences space and gives a temperature-dependent, Boltzmann weight to each sequence. 
+In a future development, this will exploited to perform a peptide-database search as a postprocessing, matching the peptides  on the probability profile: hopefully, the correct parent sequence should  be the one that ``picks'' the highest probability from the profile, among all the database sequences.
+% The latter usually search over a peptide database, looking for the most probable
+% peptides. The \emph{de-novo} potential introduced in this work can be applied to
+% the sequences extracted from the database as a refined cost-function 
+% creating a new scoring based on the noise/signal distributions.
+Another feature introduced by this method is the possibility to use thermodynamic functions as a proxy for the quality of the interpretation, reducing false positives: we have seen that the entropy of the system at $T=1$ correlates with the F-value measuring the quality of the prediction, and that it is possible to identify some thresholds for the entropy value that can act as a confidence interval, to estimate the probability that the F-value exceeds  a given threshold.
+
+The future perspectives include improvements on the final algorithm, mainly in the form of the energy function.
+%This can be achieved in different ways: a refinement of the learned energy-function 
+Future improvements will probably come from a redefinition of the learning database, 
+with more specific and stringent filters and a more specific definition of the
+precursor mass, that has been shown to be fundamental to improve model
+predictions. 
+A separate characterization of the ion distributions for different spectrometers
+can also improve the definition of the energy function,  
+as the underlying physics of the fragmentation and separation processes may produce different spectrum
+patterns.
+An important improvement would probably  come from the possibility to adjust the chemical potential (and hence, the resulting length of the predicted peptide) automatically for each spectrum.
+
+%Moreover the nature of this method, based on the global information on the
+%configuration space  yielding a final probability profile, can be coupled to a classical
+%database-search algorithm.
+%The latter usually search over a peptide database, looking for the most probable
+%peptides. The \emph{de-novo} potential introduced in this work can be applied to
+%the sequences extracted from the database as a refined cost-function 
+%creating a new scoring based on the noise/signal distributions.
+
+\paragraph{Protein Folding}
+In the second part of this Thesis we applied the WSME model for protein folding to describe the  interesting
+behaviour of the repeat protein Myotrophin.
+This protein is structured in a modular way, where the modules or repeats
+present an intrinsic stability and are arranged in a linear way.
+This proteins  poses some challenging questions, since it 
+seems to fold in a cooperative way despite its modularity, whereby it has attracted the
+attention of the researchers.
+
+Our results reproduce qualitatively the experimental behaviour of the
+molecule. Cooperativity is reproduced both in the equilibrium analysis and
+in the kinetics, and a deeper investigation show that this is compatible with
+the multi-minima free-energy landscape predicted by the model.
+%that comes out from the model application.
+The simulation of the kinetics of the folding process reveals the presence of 
+pathway heterogeneity, as proposed by \citet{Lowe2007a} to explain in a unique framework
+the behaviour of the wild type protein and its mutants.
+Moreover, the model is applied to the analysis  of several mutants corresponding to 
+%through 
+the application
+of local an non-local energy perturbations, and predicts behaviours
+qualitatively similar to the experimental ones (in particular, it shows that mutations may act as a switch in the flow of the folding/denaturing molecule towards a pathway or the other).
+
+A quantitative modification of the model can be introduced by fitting the model
+parameters to the available experimental data, as shown by
+\citet{Bruscolini2011}.
+Parameters are adapted to reproduce the picture of the $C_P$ through the use of
+a phenomenological expression derived by the WSME model.
+This model has been shown to describe successfully and quantitatively the folding
+behaviour of a downhill and a two-state-like proteins\cite{Bruscolini2011}.
+Unfortunately, such refinement of the model could not be applied in the present
+case, since it is based on the fit of calorimetric data, which are not presently
+available for Myotrophin.
+
+In this framework an interesting approach could be represented by the study of
+similar repeat proteins composed by identical modules, the so called consensus repeat
+proteins.
+These proteins are composed by the repetition of the same string of residues; they are not natural protein, but have been  synthesized in the 
+laboratory and their structures have been resolved.
+The study of consensus repeat proteins could indeed give an insight into the
+processes governing the microscopic dynamics in modular polymers.
+
+In conclusion, and according to the above observations, we believe that the use of simple statistical-mechanics models will provide a good wealth of results for biologically inspired problems in the next future.

@@ -1,0 +1,159 @@
+\chapternonum{Conclusiones}
+
+Concluyendo, se resumen los resultados más importantes descritos en esta
+Tesis y se presentan algunas propuestas para estudios futuros.
+En esta Tesis hemos tratado la aplicación de métodos analíticos y computacionales a
+problemas de tipo biológico, y hemos mostrado que, si este último puede ser reescrito
+como un
+sistema mecánico-estadístico, las poderosas herramientas de este campo pueden
+ser aplicadas al estudio de sistemas biológicamente relevantes, llevando a
+predicciones cualitativas y, en algunos casos, hasta cuantitativas. 
+
+Siguiendo este enfoque, el primer paso y a veces el más importante, es encontrar la mejor
+manera de traducir el problema original en un sistema físico cuya función energía
+describa todas las interacciones relevantes y las ligaduras del problema,
+y al mismo tiempo dicha función energía sea lo bastante simple como para ser convenientemente
+tratada con métodos analíticos o numéricos.
+
+En el trabajo que hemos presentado, se ha aplicado esta metodología 
+a dos problemas biológicos aparentemente muy distintos: 
+en el primero de los dos hemos afrontado el problema de la
+secuenciación de péptidos procedentes de Espectrometría  de Masa Tándem,
+mientras que en el segundo hemos analizado el plegamiento de la Miotrofina, una
+pequeña proteína de tipo modular.
+
+Estos problemas han sido traducidos a un sistema estadístico unidimensional con
+interacciones locales a primeros vecinos, o con interacciones que puedan
+ser reducidas a bloques: en ambos casos se puede calcular
+exactamente la distribución al equilibrio a través de la aplicación de un
+calculo de tipo matriz de transferencia. 
+
+\paragraph{Secuenciamiento de Proteínas}
+En la primera parte hemos afrontado el problema de la secuenciación de
+péptidos que representa un desafío importante y aún sin resolver en el campo
+de la Espectrometría de Masa Tándem.
+\'Esta es una técnica común, rápida y fiable la cual proporciona un espectro de masa
+de un péptido que contiene la información necesaria para poder inferir la
+secuencia de los residuos que lo componen.
+La Espectrometría de Masa Tándem, gracias a su simplicidad y relativamente bajo
+coste, es ampliamente utilizada y generalmente incrustada en una instrumentación
+high-throughput automatizada, donde una gran cantidad de péptidos
+vienen analizados automáticamente.
+Por este motivo la Espectrometría de Masa Tándem permite recolectar una enorme cantidad de espectros que 
+necesitan una herramienta automatizada para su interpretación.
+
+Los algoritmos disponibles actualmente son efectivos si aplicados a un número restringido
+de casos, como por ejemplo el análisis de proteínas cuya secuencia es conocida y
+recolectada en una base de datos, por otra parte éstos se vuelven ineficientes si utilizados en
+situaciones no estándar como la caracterización del contenido proteico de
+sistemas cuyo proteoma es todavía desconocido o el secuenciación de
+proteínas mutadas o modificadas.
+
+Nuestro enfoque frente a este desafío se basa en la traducción del problema de
+secuenciación al estudio del comportamiento en el equilibrio de un sistema
+físico. Este estudio se basa en el
+diseño de un adecuado potencial \emph{ad hoc} derivado del análisis de la
+distribución típica de los iones en el plano del espectro, y en el cálculo
+exacto de la función de partición y de otras variables termodinámicas relevantes
+del sistema, a partir de las cuales se puede calcular la secuencia del precursor.
+
+Nuestro método \ournovo~ introduce una temperatura ficticia como parámetro del
+algoritmo.
+Este parámetro, como en un sistema termodinámico real, actúa de interruptor
+que controla la cantidad de fluctuaciones presentes en el sistema y
+distingue dos regímenes:
+uno a baja temperatura donde el sistema está atrapado en un mínimo energético
+que refleja la información presente en el espectro estudiado, y otro a alta
+temperatura donde el sistema puede explorar una parte más grande del espacio de
+las configuraciones.
+A baja temperatura, nuestro algoritmo se comporta de manera
+similar a los demás \emph{de novo} algoritmos prediciendo la secuencia que 
+mejor se ajusta a los datos experimentales. A temperaturas más altas, el sistema
+explora regiones del espacio de las secuencias alejadas del mínimo energético,
+que puede ser útil para evaluar la validez de la predicción. 
+
+
+El algoritmo ha sido testado mediante una base de datos de espectros
+acoplados con una interpretación fiable de la secuencia de los péptidos
+originarios, todos doblemente cargados, y sobre la misma base de datos han sido testados
+algunos de los algoritmos \emph{de novo} disponibles (NovoHMM, PepNovo, Lutefisk).
+Nuestro algoritmo produce resultados comparables con los programas existentes
+y además exhibe algunas característica útiles relacionadas con el sistema
+termodinámico asociado que no se encuentra en los demás.
+Sobresale la posibilidad del algoritmo de controlar la temperatura de trabajo
+junto con la posibilidad de calcular exactamente la distribución de
+probabilidad al equilibrio, estas características en su conjunto permiten considerar al
+mismo tiempo el entero espacio de las secuencias.
+
+Futuros desarrollos incluyen mejoras en el algoritmo final, sobre todo en
+la forma de la función coste.
+Mejoras en el algoritmo implicaran probablemente una redefinición de la
+base de datos de aprendizaje, incluyendo unos filtros más específicos y estrictos y una
+definición más detallada de la masa del péptido precursor, que se ha
+demostrado fundamental para mejorar las predicciones del modelo.
+Una caracterización de la distribución de los iones separada para diferentes
+espectrómetros puede mejorar la definición de la función coste, debido
+al echo que la física subyacente los diferentes procesos de fragmentación y
+de separación puede producir diferentes patrones espectrales.
+
+La natura de este método, basado en la información global incrustada en el espacio de las
+configuraciones sintetizada en el perfil de probabilidad de fragmentación, puede ser acoplado a un
+algoritmo clásico de búsqueda sobre base de datos.
+Este último usualmente busca el péptido más probable en una base de datos de péptidos
+según una propia función coste. El potencial \emph{de novo} descrito en este trabajo puede ser
+aplicado a las secuencias elegidas desde la base de datos como una función coste
+refinada, creando una nueva puntuación basada en las distribuciones de los señales
+y del ruido del espectro considerado.
+
+\paragraph{Plegamiento de Proteínas}
+
+En la segunda parte de esta Tesis hemos aplicado el modelo para el plegamiento
+de proteínas WSME para describir el comportamiento de la Miotrofina.
+Esta proteína presenta una estructura en módulos, cada uno de los cuales está formado
+por dos hélices antiparalelas con cierta estabilidad intrínseca. 
+Los  cuatro módulos que componen la molécula se disponen paralelos entre sí formando una estructura lineal.
+Estas proteínas muestran experimentalmente un plegamiento cooperativo típico de
+las proteínas globulares que parece 
+en contraste con la modularidad estructural, atrayendo la atención
+de los investigadores. 
+
+Nuestros resultados reproducen cualitativamente el comportamiento experimental
+de la molécula.
+El modelo aplicado al análisis del equilibrio y de la cinética del sistema,
+reproduce la cooperación en ambos ámbitos, y una investigación más profunda 
+muestra que dicha cooperación es compatible con un
+paisaje de energía libre con múltiples mínimos, predichos por el modelo.
+La simulación del la cinética del proceso de plegamiento revela la presencia de
+una heterogeneidad de caminos, como propuesto por \citet{Lowe2007a} para
+explicar el comportamiento de la proteína wild type y de sus
+mutantes en un único marco.
+Además, el modelo ha sido aplicado al análisis de algunos mutantes
+correspondientes a la aplicación de perturbaciones locales y no locales, permitiendo
+la predicción cualitativa de comportamientos experimentales (en particular, se
+muestra que las mutaciones actúan como un interruptor en el flujo 
+hacía un camino u otro de plegamiento y desnaturalización).
+
+Una modificación del modelo para conseguir resultados cuantitativos puede ser
+introducida ajustando los parámetros del modelo a los datos experimentales
+disponibles, como mostrado por \citet{Bruscolini2011}.
+Los parámetros son adaptados para reproducir los valores de $C_P$ a través del
+uso de expresiones fenomenológicas derivadas del mismo modelo WSME.
+Se ha mostrado que este modelo describe con éxito y cuantitativamente el plegamiento de una
+proteína de tipo down-hill y una proteína a dos estados\cite{Bruscolini2011}.
+Desafortunadamente, este refinamiento del modelo no puede ser aplicado al caso
+de la Miotrofina en cuanto se basa en un ajuste a datos calorimétricos que no están
+disponibles para ella.
+
+En este marco un acercamiento interesante puede ser el estudio de proteínas
+modulares similares, compuestas por módulos idénticos, las llamadas proteínas
+modulares de consenso.
+Estas proteínas están compuestas por repeticiones de una misma cadena de
+residuos; éstas, aunque non sean proteínas naturales, han sido sintetizadas en
+laboratorio y sus estructuras han sido resueltas.
+El estudio de las proteínas de consenso puede aportar a una comprensión mayor de
+los procesos que gobiernan la dinámica microscópica en los polímeros modulares.
+
+Concluyendo, de acuerdo con las observaciones anteriores, creemos que el uso de
+simples modelos mecánico-estadísticos nos permitirá producir un cantidad
+considerable de resultados cualitativos y hasta cuantitativos 
+en problemas de inspiración biológica, en el próximo futuro.

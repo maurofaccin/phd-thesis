@@ -1,0 +1,82 @@
+
+% Aquí puedes añadir otros paquetes que quieras incluir... Ojo deben ser
+% cosas que NO modifiquen el estilo básico del libro.
+
+% [Nota: en este fichero todas las líneas están en blanco o comentadas
+% (comienzan por %). Si quieres descomentar algo no tienes más que
+% eliminar el signo % al comienzo de la línea.
+
+
+% Algunos ejmeplos de paquetes más o menos habituales son...
+% \usepackage{bm}
+% \usepackage{ae, aecompl, aeguill}
+% \usepackage{wrapfig}
+% \usepackage[dvips]{color}
+% \usepackage{rotating}
+% \usepackage{subfigure}
+% Existen muchos más. Elige los que necesitas y úsalos. En la red
+% encontraras información abundante al respecto.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% MIS PAQUETES  %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{wrapfig}
+% wrapfig modifiers
+\newlength{\wrapsep}
+\setlength{\wrapsep}{10mm}
+\newlength{\saveintextsep}
+\setlength{\saveintextsep}{\intextsep}
+\newlength{\wrapsepcol}
+\setlength{\wrapsepcol}{10mm}
+\newlength{\savecolumnsep}
+\setlength{\savecolumnsep}{\columnsep}
+
+
+% Sideways of figures & tables
+\usepackage{rotating}
+% Labels subfigures within a figure environment.
+\usepackage{subfigure}
+
+\usepackage{tikz}
+
+\usepackage[square,comma,numbers,sort&compress]{natbib}  
+\usepackage[breaklinks]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% FIN PAQUETES  %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\enne}{\mathcal{N}}
+
+\newcommand{\ournovo}{\mbox{\emph{T-novoMS}}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\newcommand{\sectionnonum}[1]{
+\phantomsection
+\addcontentsline{toc}{section}{#1}  % to add the section to the Contents
+\section*{#1}                       % to add a un-numbered section
+}
+\newcommand{\chapternonum}[1]{
+\phantomsection
+\addcontentsline{toc}{chapter}{#1}  % to add the section to the Contents
+\chapter*{#1}                       % to add a un-numbered section
+}
+\newcommand{\partnonum}[1]{
+\phantomsection
+\addcontentsline{toc}{part}{#1}  % to add the section to the Contents
+\part*{#1}                       % to add a un-numbered section
+}
+
+
+% Hypothesis and theorems
+\newtheorem{hypothesis}{Hypothesis}[chapter]
+
+
+% Numeration for introduction figures:
+\newcounter{partintro}[part]
+
+\hyphenation{Schr\"o-din-ger}
+\hyphenation{me-ta-bo-lic}
+\hyphenation{be-hav-iours}
